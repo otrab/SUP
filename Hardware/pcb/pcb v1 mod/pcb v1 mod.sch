@@ -16359,12 +16359,12 @@ QFN is non-stock</description>
 <wire x1="264.16" y1="27.94" x2="259.08" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="259.08" y1="27.94" x2="259.08" y2="20.32" width="0.1524" layer="91"/>
 <junction x="259.08" y="20.32"/>
-<pinref part="JP1" gate="G$1" pin="1"/>
-<wire x1="228.6" y1="30.48" x2="231.14" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="231.14" y1="30.48" x2="231.14" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="231.14" y1="33.02" x2="231.14" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="231.14" y1="20.32" x2="251.46" y2="20.32" width="0.1524" layer="91"/>
 <junction x="251.46" y="20.32"/>
 <pinref part="C1" gate="G$1" pin="-"/>
+<pinref part="JP1" gate="G$1" pin="2"/>
+<wire x1="228.6" y1="33.02" x2="231.14" y2="33.02" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="GND4" gate="1" pin="GND"/>
@@ -16629,13 +16629,6 @@ QFN is non-stock</description>
 <wire x1="177.8" y1="88.9" x2="187.96" y2="88.9" width="0.1524" layer="91"/>
 <wire x1="187.96" y1="88.9" x2="187.96" y2="86.36" width="0.1524" layer="91"/>
 <junction x="177.8" y="88.9"/>
-</segment>
-</net>
-<net name="N$1" class="0">
-<segment>
-<pinref part="JP1" gate="G$1" pin="2"/>
-<pinref part="S1" gate="1" pin="P"/>
-<wire x1="228.6" y1="33.02" x2="236.22" y2="33.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="RFID_PW" class="0">
@@ -17004,6 +16997,15 @@ QFN is non-stock</description>
 <wire x1="259.08" y1="81.28" x2="259.08" y2="71.12" width="0.1524" layer="91"/>
 <wire x1="259.08" y1="71.12" x2="294.64" y2="71.12" width="0.1524" layer="91"/>
 <pinref part="JP4" gate="G$1" pin="2"/>
+</segment>
+</net>
+<net name="N$1" class="0">
+<segment>
+<pinref part="JP1" gate="G$1" pin="1"/>
+<wire x1="228.6" y1="30.48" x2="233.68" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="233.68" y1="30.48" x2="233.68" y2="33.02" width="0.1524" layer="91"/>
+<pinref part="S1" gate="1" pin="P"/>
+<wire x1="233.68" y1="33.02" x2="236.22" y2="33.02" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
