@@ -16255,7 +16255,7 @@ QFN is non-stock</description>
 <part name="GND14" library="supply1" deviceset="GND" device=""/>
 <part name="GND16" library="supply1" deviceset="GND" device=""/>
 <part name="LED1" library="adafruit" deviceset="5MMRGBLED" device=""/>
-<part name="JP8" library="SparkFun-Connectors" deviceset="M02" device="PTH"/>
+<part name="JP8" library="SparkFun-Connectors" deviceset="M03" device="PTH"/>
 <part name="JP9" library="SparkFun-Connectors" deviceset="M02" device="PTH"/>
 <part name="JP4" library="SparkFun-Connectors" deviceset="M04" device="1X04_NO_SILK"/>
 </parts>
@@ -16342,7 +16342,7 @@ QFN is non-stock</description>
 <instance part="GND14" gate="1" x="157.48" y="73.66"/>
 <instance part="GND16" gate="1" x="187.96" y="73.66"/>
 <instance part="LED1" gate="G$1" x="309.88" y="160.02"/>
-<instance part="JP8" gate="G$1" x="35.56" y="114.3" rot="R90"/>
+<instance part="JP8" gate="G$1" x="33.02" y="114.3" rot="R90"/>
 <instance part="JP9" gate="G$1" x="50.8" y="114.3" rot="R90"/>
 <instance part="JP4" gate="G$1" x="299.72" y="71.12" rot="MR0"/>
 </instances>
@@ -16448,6 +16448,10 @@ QFN is non-stock</description>
 <wire x1="17.78" y1="144.78" x2="22.86" y2="144.78" width="0.1524" layer="91"/>
 <junction x="22.86" y="144.78"/>
 <pinref part="JP3" gate="G$1" pin="1"/>
+<pinref part="JP8" gate="G$1" pin="3"/>
+<wire x1="27.94" y1="132.08" x2="30.48" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="132.08" x2="30.48" y2="121.92" width="0.1524" layer="91"/>
+<junction x="27.94" y="132.08"/>
 </segment>
 <segment>
 <pinref part="GND7" gate="1" pin="GND"/>

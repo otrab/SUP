@@ -93,9 +93,9 @@ eagle.epf
 *.crc
 *.crs
 
-*.dri
+#*.dri
 *.drl
-*.gpi
+#*.gpi
 *.pls
 
 *.drd
