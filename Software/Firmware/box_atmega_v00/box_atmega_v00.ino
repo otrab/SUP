@@ -1,4 +1,3 @@
-
 //RTC Y RELE
 #include "Metro.h" //Include Metro library
 //RTC
@@ -18,16 +17,12 @@ Metro ledMetro = Metro(5000);
 #include "Rtc.h"
 #include "Rfid.h"
 
-
 //Utilizado para el control del rele
 Metro releMetro = Metro(2000); 
 int state = LOW;
 
-
 //Variables para controlar el tiempo de juego
 Metro minutoMetro = Metro(5000); 
-
-
 
 void setup() {
    //SERIAL DEBUG
@@ -74,7 +69,9 @@ void setup() {
   Serial.println("Esperando byte para reiniciar.");
   delay(2000);
   if (Serial.available() > 0){
-    EEPROM.write(0, 50); //ASIGNO UN DIA DEL MES QUE NO EXISTE PARA RESETAEAR TIEMPO
+    //ASIGNO UN DIA DEL MES QUE NO EXISTE PARA RESETAEAR TIEMPO
+    //  Esto ocurre en la funcion void resetear_tiempo_dia(void) del archivo Rtc.h
+    EEPROM.write(0, 50); 
     resetear_tiempo_dia();
     Serial.println("Resetear");
   }
@@ -86,55 +83,71 @@ void setup() {
   
 }
 
+/* Funcion para debuguear por consola
+*   Es llamada al poner una tarjeta en la caja
+*   Imprime cuantos minutos tiene el jugador
+*/
 void imprimir_date(void){
   Date2Str(date);
-        Time2Str(time);
+  Time2Str(time);
   //IMPRIMO FECHA
-        for(int i = 0; i<10; i++)Serial.print(date[i]);
-        Serial.print(" | ");
-        //IMPRIMO HORA
-        for(int i = 0; i<8; i++)Serial.print(time[i]);
-        Serial.println("");
-        //IMPRIMO MINUTOS DE JUGADOR 1        
-        if(usuario==1){
-          Serial.print("A enzo le quedan: ");
-          Serial.print(minutos_juego1);
-          Serial.println(" minutos");
-        }
-        //IMPRIMO MINUTOS DE JUGADOR 2  
-        if(usuario==2){
-          Serial.print("A vixo le quedan: ");
-          Serial.print(minutos_juego2);
-          Serial.println(" minutos");
-        }  
+  for(int i = 0; i<10; i++)Serial.print(date[i]);
+  Serial.print(" | ");
+  //IMPRIMO HORA
+  for(int i = 0; i<8; i++)Serial.print(time[i]);
+  Serial.println("");
+  //IMPRIMO MINUTOS DE JUGADOR 1        
+  if(usuario==1){
+    Serial.print("A enzo le quedan: ");
+    Serial.print(minutos_juego1);
+    Serial.println(" minutos");
+  }
+  //IMPRIMO MINUTOS DE JUGADOR 2  
+  if(usuario==2){
+    Serial.print("A vixo le quedan: ");
+    Serial.print(minutos_juego2);
+    Serial.println(" minutos");
+  }  
 }
 
+/*  Funcion para descontar 1 minuto de juego
+*     Es llamada cada un minuto siempre que el jugador este jugando
+*     Refresca la variable global minuto_ant
+*     Resta un minuto de la variable minuto_juego y guarda en eprom
+*/
 void quitar_minuto(void){
   Serial.println("Descontar minuto de juego?");
-        //Actualizo el minuto
-        GetDateDs1307(&second,&minute,&hour,&dayOfWeek,&dayOfMonth,&month,&year);
-        minuto_ant=minute;     
-        //Resto minutos y modifico valor en EEPROM cada 5 minutos
-        if(usuario==1)Serial.print("Enzo ");
-        if(usuario==2)Serial.print("Vixo ");
-        Serial.print("Menos un minuto: ");
-        if(usuario==1){
-          minutos_juego1=minutos_juego1-1;
-          Serial.println(minutos_juego1);
-          if(minutos_juego1!=0&&minutos_juego1%1==0){
-            Serial.println("A EEPROM J1");
-            EEPROM.write(1, minutos_juego1);
-          }
-        }if(usuario==2){
-          minutos_juego2=minutos_juego2-1;
-          Serial.println(minutos_juego2);
-          if(minutos_juego2!=0&&minutos_juego2%1==0){
-            Serial.println("A EEPROM J2");
-            EEPROM.write(2, minutos_juego2);
-          }
-        }
+  //Actualizo el minuto
+  GetDateDs1307(&second,&minute,&hour,&dayOfWeek,&dayOfMonth,&month,&year);
+  minuto_ant=minute;     
+  //Resto minutos y modifico valor en EEPROM cada 5 minutos
+  if(usuario==1)Serial.print("Enzo ");
+  if(usuario==2)Serial.print("Vixo ");
+  Serial.print("Menos un minuto: ");
+  if(usuario==1){
+    minutos_juego1=minutos_juego1-1;
+    Serial.println(minutos_juego1);
+    //la operacion modulo (%) esta en caso de que decida no escribir cada 1 minuto en la eprom
+    if(minutos_juego1!=0&&minutos_juego1%1==0){
+      Serial.println("A EEPROM J1");
+      EEPROM.write(1, minutos_juego1);
+    }
+  }
+  if(usuario==2){
+    minutos_juego2=minutos_juego2-1;
+    Serial.println(minutos_juego2);
+    if(minutos_juego2!=0&&minutos_juego2%1==0){
+      Serial.println("A EEPROM J2");
+      EEPROM.write(2, minutos_juego2);
+    }
+  }
 }
 
+/*  Funcion que bloquea la tarjeta.
+*     Resta una tanda de usuario1_activar y guarda en eprom. Usuario1_activar en 0 es la condicion que bloquea el rele
+*     Ademas de restar una tanda, asigna pausa y restituye tiempo para la tanda siguiente
+*     Es llamada cuando se acaban los minutos de juego
+*/
 void desactivar_tarjeta(void){
   Serial.println("Fin de tu tiempo");
   if(usuario==1){
@@ -166,103 +179,114 @@ void desactivar_tarjeta(void){
   }
 }
 
-int tiempo_pausa=0;
+/* Esta funcion se ocupa en caso de que se deseen que se tomen pausas al jugar. 
+*   Por ejemplo: Podria setearle a un niño 2 tandas de 1 hora, con pausa obligada de al menos 15 minutos.
+*   Si bien esto está codificado, no se ofrecerá en el primer MVP.
+*/
+int tiempo_pausa=0; //Variable temporal para descontar de 1 minuto y no menos. Solo se ocupa en esta funcion
 void descuento_pausa(void){
   //DESCUENTO TIEMPO STOP JUGADOR 1
   if(minutos_stop1>0){
     GetDateDs1307(&second,&minute,&hour,&dayOfWeek,&dayOfMonth,&month,&year);
+    //Solo cada 1 minuto descuento
     if(tiempo_pausa!=minute){
       Serial.println("PAUSA DE ENZO");
       minutos_stop1=minutos_stop1-1;
-      tiempo_pausa=minute;
+      tiempo_pausa=minute; 
     }
   }
   //DESCUENTO TIEMPO STOP JUGADOR 2
   if(minutos_stop2>0){
     GetDateDs1307(&second,&minute,&hour,&dayOfWeek,&dayOfMonth,&month,&year);
+    //Solo cada 1 minuto descuento
     if(tiempo_pausa!=minute){
       Serial.println("PAUSA DE VIXO");
       minutos_stop2=minutos_stop2-1;
-      tiempo_pausa=minute;
+      tiempo_pausa=minute; 
     }
   }
 }
 
 int target=1;
-void loop () {  
+void loop () { 
+  //Este while esta para evitar la interrupcion que hace el main para leer el serial
+  // Puede que haya que cambiarlo, dado que hay que estar atento al serial (HW o SW) conectado al ESP
   while(true){
-  int target=0;
-  
-  //SI HAY TARGETA RETORNA 0 Y ALCMACENA EL NUMERO EN user_chk
-  target=leer_rfid();
-  if(!target)user_chk=chk_rfid();
-  
-  //SI HAY TARJETA
-  if (target==0)
-  {
-    digitalWrite(buz, LOW);
-    Serial.print("Tarjeta: ");
-    Serial.println(user_chk);
+    int target=0;
     
-   //Ve si la tarjeta corresponde a uno de los 2 usuarios, si éste está activo y no tiene restricción por pausa entre tandas (minutos_stop)
-    if((user_chk==chk1&&usuario1_activar&&minutos_stop1==0)||(user_chk==chk2&&usuario2_activar&&minutos_stop2==0)){     
-      //Prendo Rele
-      state=HIGH;
-      Serial.println("Rele HIGH");
-      //Si la wii estaba apagada, señalo usuario
-      if(usuario==0)
-      {    
-        //SEÑALO USUARIO
-        if(user_chk==chk1){
-          usuario=1;
-          analogWrite(buz,80); //emite sonido
-          delay(200);
-          digitalWrite(buz, LOW);
-        }
-        if(user_chk==chk2){
-          usuario=2;
-          analogWrite(buz,80); //emite sonido
-          delay(200);
-          digitalWrite(buz, LOW);
-        }
-        //OBTENGO TIEMPO
+    //SI HAY TARGETA RETORNA 0 Y ALCMACENA EL NUMERO EN user_chk
+    target=leer_rfid();
+    if(!target)user_chk=chk_rfid();
+    
+    //SI HAY TARJETA
+    if (target==0)
+    {
+      digitalWrite(buz, LOW);
+      Serial.print("Tarjeta: ");
+      Serial.println(user_chk);
+      
+     //Ve si la tarjeta corresponde a uno de los 2 usuarios, si éste está activo y no tiene restricción por pausa entre tandas (minutos_stop)
+      if((user_chk==chk1&&usuario1_activar&&minutos_stop1==0)||(user_chk==chk2&&usuario2_activar&&minutos_stop2==0)){     
+        //Prendo Rele
+        state=HIGH;
+        Serial.println("Rele HIGH");
+        //Si la wii estaba apagada, señalo usuario
+        if(usuario==0)
+        {    
+          //SEÑALO USUARIO
+          if(user_chk==chk1){
+            usuario=1;
+            analogWrite(buz,80); //emite sonido
+            delay(200);
+            digitalWrite(buz, LOW);
+          }
+          if(user_chk==chk2){
+            usuario=2;
+            analogWrite(buz,80); //emite sonido
+            delay(200);
+            digitalWrite(buz, LOW);
+          }
+          //OBTENGO TIEMPO
+          GetDateDs1307(&second,&minute,&hour,&dayOfWeek,&dayOfMonth,&month,&year);
+          //GUARDO EL MINUTO PREVIO
+          minuto_ant=minute;
+          imprimir_date();
+        }      
+        //Reviso el tiempo
         GetDateDs1307(&second,&minute,&hour,&dayOfWeek,&dayOfMonth,&month,&year);
-        //GUARDO EL MINUTO PREVIO
-        minuto_ant=minute;
-        imprimir_date();
-      }      
-      //Reviso el tiempo
-      GetDateDs1307(&second,&minute,&hour,&dayOfWeek,&dayOfMonth,&month,&year);
-      //Descuento un minuto de juego
-      if (minuto_ant!=minute)quitar_minuto();                   
-      //Desactivo tarjeta
-      if((minutos_juego1<=0&&usuario==1)||(minutos_juego2<=0&&usuario==2)){
-        desactivar_tarjeta();   
-        forzar_apagado=1;
-      }
+        //Descuento un minuto de juego
+        if (minuto_ant!=minute)quitar_minuto();                   
+        //Desactivo tarjeta si se acabó el tiempo
+        if((minutos_juego1<=0&&usuario==1)||(minutos_juego2<=0&&usuario==2)){
+          desactivar_tarjeta();   
+          forzar_apagado=1;
+        }
+        //Actualizo la cuenta regresiva para que no se apague
+        releMetro.reset();
+      }    
+      //Reseteo el rfid para poder volver a leer la tarjeta
+      reset_rfid();
+      //Actualizo la cuenta regresiva para que no se apague
       releMetro.reset();
-    }    
-    reset_rfid();
-    releMetro.reset();
-  }
-  
-  //Revisa si hay que apagar
-  if (releMetro.check() == 1 || forzar_apagado){
-    forzar_apagado = 0;
-    usuario=0;
-    Serial.print(usuario);
-    Serial.println("Apagar");
-    state=LOW;
-    //releMetro.reset();
-  }
-  
-  //DESCUENTO EL TIEMPO ENTRE TANDAS
-  descuento_pausa();
-   
-  //CONTROL SOBRE EL RELE
-  digitalWrite(RELE,state);
-  //Pausa
-  delay(100);
+    }
+    
+    //Revisa si hay que apagar, ya sea porque se retiró por algunos segundos la tarjeta o porque se acabo el tiempo (flag forzar_apagado)
+    if (releMetro.check() == 1 || forzar_apagado){
+      forzar_apagado = 0;
+      usuario=0;
+      Serial.print(usuario);
+      Serial.println("Apagar");
+      state=LOW;
+      //releMetro.reset();
+    }
+    
+    //DESCUENTO EL TIEMPO ENTRE TANDAS
+    descuento_pausa();
+     
+    //CONTROL SOBRE EL RELE
+    digitalWrite(RELE,state);
+    //Pausa
+    delay(100);
   }
   
 }
