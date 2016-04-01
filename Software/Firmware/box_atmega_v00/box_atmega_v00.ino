@@ -39,13 +39,13 @@ void setup() {
   
   //Reset necesario para el RFID
   pinMode(vo_rfid, OUTPUT);
-  digitalWrite(vo_rfid, HIGH);  
+  digitalWrite(vo_rfid, LOW);  
    
   //SERIAL RFID
   mySerial.begin(9600);  // connect to the serial port  
   //RELE
   pinMode(RELE,OUTPUT);
-  digitalWrite(RELE,state);  
+  digitalWrite(RELE,!state);  
   // Wire RTC
   Wire.begin();
   // RTC init
@@ -284,7 +284,7 @@ void loop () {
     descuento_pausa();
      
     //CONTROL SOBRE EL RELE
-    digitalWrite(RELE,state);
+    digitalWrite(RELE,!state);
     //Pausa
     delay(100);
   }

@@ -24,14 +24,14 @@ int leer_rfid(void){
 
 void reset_rfid(void){
   //Serial.println("ledMetro init");
-  digitalWrite(vo_rfid, LOW); 
+  digitalWrite(vo_rfid, HIGH); 
   /*
   mySerial.end();
   digitalWrite(2, LOW); 
   digitalWrite(3, LOW); 
   */
   delay(800);
-  digitalWrite(vo_rfid, HIGH);
+  digitalWrite(vo_rfid, LOW);
   /*
   digitalWrite(2, HIGH); 
   digitalWrite(3, HIGH); 

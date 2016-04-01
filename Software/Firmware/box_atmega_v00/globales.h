@@ -4,15 +4,16 @@
 #include "WProgram.h"
 #endif
 
+//Originalmente era buz 5 y rele 7
 
 //BUZZER
-int buz=5;
+int buz=3;
 //RELE
-int RELE=7;
+int RELE=8; //8 o 12 es el otro
 
 //CHECKSUM DE LAS TARJETAS
-int chk1=202;
-int chk2=210;
+int chk1=174;
+int chk2=240;
 
 // RTC variables
 byte second;        // 0-59
@@ -26,7 +27,7 @@ char date[11];
 char time[9];
 
 //RFID Variables
-int vo_rfid=4;
+int vo_rfid=5; 
 char buffer[64];
 //Variable global para identificar el codigo
 int user_chk=0;
