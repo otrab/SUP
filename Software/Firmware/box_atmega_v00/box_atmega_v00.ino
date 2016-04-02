@@ -25,13 +25,19 @@ int state = LOW;
 Metro minutoMetro = Metro(5000); 
 
 void setup() {
-   //SERIAL DEBUG
-  Serial.begin(57600);    
+  analogWrite(pin_blue, 100);
+  //Configurarcion LED RGB
+  pinMode(pin_red, OUTPUT);
+  pinMode(pin_green, OUTPUT);
+  pinMode(pin_blue, OUTPUT);
+  
+  //SERIAL DEBUG
+  Serial.begin(115200);    
   Serial.println("En Setup");
   //Sonid BUZZER
   pinMode(buz, OUTPUT);
   //MUSICA
-  play();
+  //play();
   delay(250);
   digitalWrite(buz, LOW); 
   state=LOW;
@@ -80,7 +86,87 @@ void setup() {
   minutos_juego2 = EEPROM.read(2);
   usuario1_activar = EEPROM.read(3);
   usuario2_activar = EEPROM.read(4);
+
+
+
+  //Con esta opcion siempre reestablecia el tiempo maximo para la luz
+  //segundos_restantes = tiempo_juego*60;
+
+  segundos_restantes = minutos_juego1*60;
+
   
+
+}
+
+/* Funcion para pasar de verde a rojo en funcion del tiempo de juego que quede
+ * Debe leer los minutos de juego total  y restante 
+ * dividir minutos_juego * 60 / 255 , para obtener cada cuantos segundos cambiar en 1 un color
+ * Debe llevar una cuenta de los segundos transcurridos entre cada llamada.
+ * Tambien emite sonido el ultimo minuto
+*/
+
+void cambiar_colores(){
+  GetDateDs1307(&second,&minute,&hour,&dayOfWeek,&dayOfMonth,&month,&year);
+  tiempo_color = second;
+  //tiempo_color=millis();
+  Serial.println();
+  Serial.print("tiempo_pre_color: ");
+  Serial.println(tiempo_pre_color);
+  Serial.print("tiempo_color: ");
+  Serial.println(tiempo_color);
+
+  int segundos_transcurridos=0;
+  if(tiempo_color>tiempo_pre_color)segundos_transcurridos = tiempo_color-tiempo_pre_color;
+  //Cuando es otro minuto. Ej: 15:31:59 y 15:32:02 -> dif = 3 
+  else if(tiempo_color<tiempo_pre_color)segundos_transcurridos = (60-tiempo_pre_color)+tiempo_color;
+  //int segundos_transcurridos = (tiempo_color-tiempo_pre_color)/1000;
+  //analogWrite(pin_red, 255);  //digitalWrite(pin_red, HIGH);
+  //analogWrite(pin_green, 255);  //digitalWrite(pin_green, LOW);
+  analogWrite(pin_blue, 0);  //digitalWrite(pin_blue, LOW);
+  
+  //Trabajo en segundos
+  if (segundos_transcurridos>0)
+  {
+    Serial.print("segundos_transcurridos: ");
+    Serial.println(segundos_transcurridos);
+    if(segundos_restantes>0)
+    {
+      segundos_restantes=segundos_restantes - segundos_transcurridos;
+      if(segundos_restantes<0)segundos_restantes=0;
+    }
+    Serial.print("segundos_restantes2: ");
+    Serial.println(segundos_restantes);
+
+    int verde=map(segundos_restantes, 0, tiempo_juego*60, 0, 255);
+    int rojo=255-verde;
+    
+    /*
+    Serial.print("rojo: ");
+    Serial.println(rojo);
+    Serial.print("verde: ");
+    Serial.println(verde);
+    */
+
+    analogWrite(pin_red, rojo);  //digitalWrite(pin_red, HIGH);
+    
+    //El verde es muy fuerte en comparacion al rojo
+    verde=verde-25;
+    if(verde<0)verde=0;
+    analogWrite(pin_green, verde);  //digitalWrite(pin_green, LOW);
+
+    //Sonido 
+    if (segundos_restantes<60)
+    {
+      analogWrite(buz,20); //emite sonido
+      delay(50);
+      digitalWrite(buz, LOW);
+      delay(50);
+      analogWrite(buz,20); //emite sonido
+      delay(50);
+      digitalWrite(buz, LOW);
+    }
+    tiempo_pre_color=tiempo_color;
+  }
 }
 
 /* Funcion para debuguear por consola
@@ -208,6 +294,9 @@ void descuento_pausa(void){
 }
 
 int target=1;
+
+int segundo_inicio=0;
+
 void loop () { 
   //Este while esta para evitar la interrupcion que hace el main para leer el serial
   // Puede que haya que cambiarlo, dado que hay que estar atento al serial (HW o SW) conectado al ESP
@@ -217,6 +306,8 @@ void loop () {
     //SI HAY TARGETA RETORNA 0 Y ALCMACENA EL NUMERO EN user_chk
     target=leer_rfid();
     if(!target)user_chk=chk_rfid();
+
+    
     
     //SI HAY TARJETA
     if (target==0)
@@ -225,8 +316,57 @@ void loop () {
       Serial.print("Tarjeta: ");
       Serial.println(user_chk);
       
+      if(user_chk==master_id)
+      {
+        resetear_tiempo_dia();
+        EEPROM.write(0, 50); 
+        usuario1_activar=1;
+        resetear_tiempo_dia();
+        Serial.println("Resetear");
+
+        minutos_juego1 = EEPROM.read(1);
+        minutos_juego2 = EEPROM.read(2);
+        usuario1_activar = EEPROM.read(3);
+        usuario2_activar = EEPROM.read(4);
+
+        //Para la luz
+        segundos_restantes = minutos_juego1*60;
+        /*
+        Serial.print("usuario1_activar0: ");
+        Serial.println(usuario1_activar);
+        Serial.print("segundos_restantes0: ");
+        Serial.println(segundos_restantes);
+        Serial.println();
+        */
+
+        //Hago parpadear la luz azul
+        analogWrite(pin_blue, 255);
+        delay(50);
+        analogWrite(pin_blue, 0);
+        delay(50);
+        analogWrite(pin_blue, 255);
+        delay(50);
+        analogWrite(pin_blue, 0);
+        delay(50);
+        analogWrite(pin_blue, 100);
+        
+      }
+      
      //Ve si la tarjeta corresponde a uno de los 2 usuarios, si éste está activo y no tiene restricción por pausa entre tandas (minutos_stop)
-      if((user_chk==chk1&&usuario1_activar&&minutos_stop1==0)||(user_chk==chk2&&usuario2_activar&&minutos_stop2==0)){     
+      if((user_chk==chk1&&usuario1_activar&&minutos_stop1==0)||(user_chk==chk2&&usuario2_activar&&minutos_stop2==0)){
+        //Cuando recien se detecta la tarjeta del jugador
+        if(segundo_inicio==-1){
+          GetDateDs1307(&second,&minute,&hour,&dayOfWeek,&dayOfMonth,&month,&year);
+          segundo_inicio=second; // -1 indica que no esta seteado
+          tiempo_pre_color=second;
+          //Para que coincida la luz con el apagado efectivo
+          segundos_restantes = minutos_juego1*60;
+          //Señal luminica al detectar tarjeta
+          analogWrite(pin_green, 255);
+          
+          
+        }
+        cambiar_colores();
         //Prendo Rele
         state=HIGH;
         Serial.println("Rele HIGH");
@@ -236,15 +376,6 @@ void loop () {
           //SEÑALO USUARIO
           if(user_chk==chk1){
             usuario=1;
-            analogWrite(buz,80); //emite sonido
-            delay(200);
-            digitalWrite(buz, LOW);
-          }
-          if(user_chk==chk2){
-            usuario=2;
-            analogWrite(buz,80); //emite sonido
-            delay(200);
-            digitalWrite(buz, LOW);
           }
           //OBTENGO TIEMPO
           GetDateDs1307(&second,&minute,&hour,&dayOfWeek,&dayOfMonth,&month,&year);
@@ -254,12 +385,33 @@ void loop () {
         }      
         //Reviso el tiempo
         GetDateDs1307(&second,&minute,&hour,&dayOfWeek,&dayOfMonth,&month,&year);
+        //imprimir_date();
         //Descuento un minuto de juego
-        if (minuto_ant!=minute)quitar_minuto();                   
+        if (minuto_ant!=minute)
+        {
+          Serial.print("minute: ");
+          Serial.println(minute);
+          Serial.print("second: ");
+          Serial.println(second);
+          Serial.print("segundo_inicio: ");
+          Serial.println(segundo_inicio);
+          if (second>segundo_inicio)quitar_minuto();
+        }
+        
         //Desactivo tarjeta si se acabó el tiempo
         if((minutos_juego1<=0&&usuario==1)||(minutos_juego2<=0&&usuario==2)){
           desactivar_tarjeta();   
           forzar_apagado=1;
+          delay(2000);
+          /*
+          analogWrite(buz,20); //emite sonido
+          delay(50);
+          digitalWrite(buz, LOW);
+          delay(50);
+          */
+          analogWrite(buz,20); //emite sonido
+          delay(1000);
+          digitalWrite(buz, LOW);
         }
         //Actualizo la cuenta regresiva para que no se apague
         releMetro.reset();
@@ -272,10 +424,14 @@ void loop () {
     
     //Revisa si hay que apagar, ya sea porque se retiró por algunos segundos la tarjeta o porque se acabo el tiempo (flag forzar_apagado)
     if (releMetro.check() == 1 || forzar_apagado){
+      segundo_inicio=-1; //Para contar los minutos solo al pasar por el segundo de inicio
       forzar_apagado = 0;
       usuario=0;
       Serial.print(usuario);
       Serial.println("Apagar");
+      analogWrite(pin_red, 0);
+      analogWrite(pin_green, 0);
+      analogWrite(pin_blue, 100);
       state=LOW;
       //releMetro.reset();
     }
@@ -287,6 +443,7 @@ void loop () {
     digitalWrite(RELE,!state);
     //Pausa
     delay(100);
+
   }
   
 }

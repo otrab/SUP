@@ -4,16 +4,23 @@
 #include "WProgram.h"
 #endif
 
-//Originalmente era buz 5 y rele 7
+//LED RGB
+int pin_red = 9; 
+int pin_green = 10; 
+int pin_blue = 11; 
+long segundos_restantes; 
+unsigned long tiempo_color;
+unsigned long tiempo_pre_color=0;
 
 //BUZZER
 int buz=3;
 //RELE
-int RELE=8; //8 o 12 es el otro
+int RELE=12; //8 o 12 es el otro
 
 //CHECKSUM DE LAS TARJETAS
-int chk1=174;
+int chk1=192;
 int chk2=240;
+int master_id=174;
 
 // RTC variables
 byte second;        // 0-59
@@ -39,7 +46,7 @@ int reset = 8;
 int usuario1_activar=1; //EEPROM 3
 int usuario2_activar=1; //EEPROM 4
 //Variables para llevar el tiempo restante
-int tiempo_juego=1;
+int tiempo_juego=5;
 int minutos_juego1=0; //EEPROM 1
 int minutos_juego2=0; //EEPROM 2
 int pausa=0;

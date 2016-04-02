@@ -1,7 +1,8 @@
 
  
 int speaker = buz;    //porta do arduino
-long vel = 20000;
+//long vel = 20000;
+long vel = 17000;
 
 
 
@@ -52,6 +53,7 @@ int melod[] = {e, e, e, c, e, g, G, c, G, E, A, B, Bb, A, G, e, g, a, f, g, e, c
 int ritmo[] = {6, 12, 12, 6, 12, 24, 24, 18, 18, 18, 12, 12, 6, 12, 8, 8, 8, 12, 6, 12, 12, 6, 6, 6, 12};
 
     for (int i=0; i<25; i++) {
+    //for (int i=24; i>=10; i--) {
         int tom = melod[i];
         int tempo = ritmo[i];
  
