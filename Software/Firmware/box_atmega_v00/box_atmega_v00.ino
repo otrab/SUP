@@ -395,7 +395,18 @@ void loop () {
           Serial.println(second);
           Serial.print("segundo_inicio: ");
           Serial.println(segundo_inicio);
-          if (second>segundo_inicio)quitar_minuto();
+          if (second>segundo_inicio)
+          {
+            quitar_minuto();
+            //Bip al pasar cada minuto
+            analogWrite(buz,20); //emite sonido
+            delay(50);
+            digitalWrite(buz, LOW);
+            delay(50);
+            analogWrite(buz,20); //emite sonido
+            delay(100);
+            digitalWrite(buz, LOW);
+          }
         }
         
         //Desactivo tarjeta si se acabó el tiempo
