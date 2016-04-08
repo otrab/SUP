@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.4.0">
+<eagle version="7.3.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -16238,7 +16238,7 @@ QFN is non-stock</description>
 <part name="R11" library="rcl" deviceset="R-US_" device="R0805" value="100R"/>
 <part name="R12" library="rcl" deviceset="R-US_" device="R0805" value="100R"/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
-<part name="C3" library="rcl" deviceset="C-US" device="C1206" value="1uF"/>
+<part name="C3" library="rcl" deviceset="C-US" device="C1206" value="10uF"/>
 <part name="C4" library="rcl" deviceset="C-US" device="C0805" value="100nF"/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="+3V35" library="supply1" deviceset="+3V3" device=""/>
@@ -16248,7 +16248,7 @@ QFN is non-stock</description>
 <part name="R2" library="rcl" deviceset="R-US_" device="R0805" value="10k"/>
 <part name="Q1" library="transistor-pnp" deviceset="2N3906" device=""/>
 <part name="R1" library="rcl" deviceset="R-US_" device="R0805" value="10k"/>
-<part name="C1" library="rcl" deviceset="CPOL-US" device="E2.5-6" value="10uF"/>
+<part name="C1" library="rcl" deviceset="CPOL-US" device="E2.5-6" value="1000uF"/>
 <part name="C2" library="rcl" deviceset="CPOL-US" device="E2.5-6" value="10uF"/>
 <part name="C10" library="rcl" deviceset="C-US" device="C0805" value="100nF"/>
 <part name="C9" library="rcl" deviceset="C-US" device="C0805" value="100nF"/>
