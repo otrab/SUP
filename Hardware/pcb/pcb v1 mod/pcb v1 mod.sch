@@ -16221,7 +16221,7 @@ QFN is non-stock</description>
 <part name="C7" library="rcl" deviceset="C-US" device="C1206" value="22pF"/>
 <part name="C8" library="rcl" deviceset="C-US" device="C1206" value="22pF"/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
-<part name="R13" library="rcl" deviceset="R-US_" device="R0805" value="100K"/>
+<part name="R13" library="rcl" deviceset="R-US_" device="R0805" value="10K"/>
 <part name="J1" library="SparkFun-Connectors" deviceset="AVR_SPI_PRG_6" device="PTH"/>
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
 <part name="C6" library="rcl" deviceset="C-US" device="C0805" value="100nF"/>
@@ -16245,7 +16245,7 @@ QFN is non-stock</description>
 <part name="P+7" library="supply1" deviceset="+5V" device=""/>
 <part name="GND15" library="supply1" deviceset="GND" device=""/>
 <part name="LVLSHF1" library="partes" deviceset="LEVELSHIFTER4" device=""/>
-<part name="R2" library="rcl" deviceset="R-US_" device="R0805" value="10k"/>
+<part name="R2" library="rcl" deviceset="R-US_" device="R0805" value="100k"/>
 <part name="Q1" library="transistor-pnp" deviceset="2N3906" device=""/>
 <part name="R1" library="rcl" deviceset="R-US_" device="R0805" value="10k"/>
 <part name="C1" library="rcl" deviceset="CPOL-US" device="E2.5-6" value="1000uF"/>
