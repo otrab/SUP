@@ -16234,7 +16234,7 @@ QFN is non-stock</description>
 <part name="R5" library="rcl" deviceset="R-US_" device="R0805" value="10k"/>
 <part name="JP3" library="SparkFun-Connectors" deviceset="M03" device="PTH"/>
 <part name="JP7" library="SparkFun-Connectors" deviceset="M03" device="PTH"/>
-<part name="R10" library="rcl" deviceset="R-US_" device="R1206" value="160R"/>
+<part name="R10" library="rcl" deviceset="R-US_" device="R1206" value="100R"/>
 <part name="R11" library="rcl" deviceset="R-US_" device="R0805" value="100R"/>
 <part name="R12" library="rcl" deviceset="R-US_" device="R0805" value="100R"/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
@@ -16335,7 +16335,10 @@ QFN is non-stock</description>
 <attribute name="VALUE" x="261.62" y="88.9" size="1.778" layer="96"/>
 </instance>
 <instance part="R1" gate="G$1" x="243.84" y="86.36"/>
-<instance part="C1" gate="G$1" x="251.46" y="27.94"/>
+<instance part="C1" gate="G$1" x="251.46" y="27.94" smashed="yes">
+<attribute name="NAME" x="252.476" y="28.575" size="1.778" layer="95"/>
+<attribute name="VALUE" x="242.316" y="23.749" size="1.778" layer="96"/>
+</instance>
 <instance part="C2" gate="G$1" x="307.34" y="25.4"/>
 <instance part="C10" gate="G$1" x="187.96" y="83.82"/>
 <instance part="C9" gate="G$1" x="157.48" y="83.82"/>
