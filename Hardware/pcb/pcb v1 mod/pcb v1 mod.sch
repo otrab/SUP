@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.4.0">
+<eagle version="7.3.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -16221,7 +16221,7 @@ QFN is non-stock</description>
 <part name="C7" library="rcl" deviceset="C-US" device="C1206" value="22pF"/>
 <part name="C8" library="rcl" deviceset="C-US" device="C1206" value="22pF"/>
 <part name="GND12" library="supply1" deviceset="GND" device=""/>
-<part name="R13" library="rcl" deviceset="R-US_" device="R0805" value="100K"/>
+<part name="R13" library="rcl" deviceset="R-US_" device="R0805" value="10K"/>
 <part name="J1" library="SparkFun-Connectors" deviceset="AVR_SPI_PRG_6" device="PTH"/>
 <part name="GND13" library="supply1" deviceset="GND" device=""/>
 <part name="C6" library="rcl" deviceset="C-US" device="C0805" value="100nF"/>
@@ -16234,21 +16234,21 @@ QFN is non-stock</description>
 <part name="R5" library="rcl" deviceset="R-US_" device="R0805" value="10k"/>
 <part name="JP3" library="SparkFun-Connectors" deviceset="M03" device="PTH"/>
 <part name="JP7" library="SparkFun-Connectors" deviceset="M03" device="PTH"/>
-<part name="R10" library="rcl" deviceset="R-US_" device="R1206" value="160R"/>
+<part name="R10" library="rcl" deviceset="R-US_" device="R1206" value="100R"/>
 <part name="R11" library="rcl" deviceset="R-US_" device="R0805" value="100R"/>
 <part name="R12" library="rcl" deviceset="R-US_" device="R0805" value="100R"/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
-<part name="C3" library="rcl" deviceset="C-US" device="C1206" value="1uF"/>
+<part name="C3" library="rcl" deviceset="C-US" device="C1206" value="10uF"/>
 <part name="C4" library="rcl" deviceset="C-US" device="C0805" value="100nF"/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="+3V35" library="supply1" deviceset="+3V3" device=""/>
 <part name="P+7" library="supply1" deviceset="+5V" device=""/>
 <part name="GND15" library="supply1" deviceset="GND" device=""/>
 <part name="LVLSHF1" library="partes" deviceset="LEVELSHIFTER4" device=""/>
-<part name="R2" library="rcl" deviceset="R-US_" device="R0805" value="10k"/>
+<part name="R2" library="rcl" deviceset="R-US_" device="R0805" value="100k"/>
 <part name="Q1" library="transistor-pnp" deviceset="2N3906" device=""/>
 <part name="R1" library="rcl" deviceset="R-US_" device="R0805" value="10k"/>
-<part name="C1" library="rcl" deviceset="CPOL-US" device="E2.5-6" value="10uF"/>
+<part name="C1" library="rcl" deviceset="CPOL-US" device="E2.5-6" value="1000uF"/>
 <part name="C2" library="rcl" deviceset="CPOL-US" device="E2.5-6" value="10uF"/>
 <part name="C10" library="rcl" deviceset="C-US" device="C0805" value="100nF"/>
 <part name="C9" library="rcl" deviceset="C-US" device="C0805" value="100nF"/>
@@ -16335,7 +16335,10 @@ QFN is non-stock</description>
 <attribute name="VALUE" x="261.62" y="88.9" size="1.778" layer="96"/>
 </instance>
 <instance part="R1" gate="G$1" x="243.84" y="86.36"/>
-<instance part="C1" gate="G$1" x="251.46" y="27.94"/>
+<instance part="C1" gate="G$1" x="251.46" y="27.94" smashed="yes">
+<attribute name="NAME" x="252.476" y="28.575" size="1.778" layer="95"/>
+<attribute name="VALUE" x="242.316" y="23.749" size="1.778" layer="96"/>
+</instance>
 <instance part="C2" gate="G$1" x="307.34" y="25.4"/>
 <instance part="C10" gate="G$1" x="187.96" y="83.82"/>
 <instance part="C9" gate="G$1" x="157.48" y="83.82"/>
