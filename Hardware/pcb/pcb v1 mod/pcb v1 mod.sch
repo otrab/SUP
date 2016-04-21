@@ -16238,7 +16238,7 @@ QFN is non-stock</description>
 <part name="R11" library="rcl" deviceset="R-US_" device="R0805" value="100R"/>
 <part name="R12" library="rcl" deviceset="R-US_" device="R0805" value="100R"/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
-<part name="C3" library="rcl" deviceset="C-US" device="C1206" value="10uF"/>
+<part name="C3" library="rcl" deviceset="C-US" device="C1206" value="100uF"/>
 <part name="C4" library="rcl" deviceset="C-US" device="C0805" value="100nF"/>
 <part name="GND9" library="supply1" deviceset="GND" device=""/>
 <part name="+3V35" library="supply1" deviceset="+3V3" device=""/>
