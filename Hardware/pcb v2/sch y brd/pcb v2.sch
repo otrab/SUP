@@ -6,7 +6,7 @@
 <setting alwaysvectorfont="no"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="0.1" unitdist="inch" unit="inch" style="dots" multiple="1" display="yes" altdistance="0.01" altunitdist="inch" altunit="inch"/>
+<grid distance="0.1" unitdist="inch" unit="inch" style="lines" multiple="1" display="no" altdistance="0.01" altunitdist="inch" altunit="inch"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="no" active="no"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -90,8 +90,13 @@
 <layer number="111" name="LPC17xx" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="112" name="tSilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="113" name="IDFDebug" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="114" name="FRNTMAAT1" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="115" name="FRNTMAAT2" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="116" name="Patch_BOT" color="9" fill="4" visible="yes" active="yes"/>
+<layer number="117" name="BACKMAAT1" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="118" name="Rect_Pads" color="7" fill="1" visible="no" active="no"/>
+<layer number="119" name="KAP_TEKEN" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="120" name="KAP_MAAT1" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="121" name="_tsilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="122" name="_bsilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="123" name="tTestmark" color="7" fill="1" visible="yes" active="yes"/>
@@ -101,8 +106,10 @@
 <layer number="127" name="_tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="128" name="_bValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="129" name="Mask" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="130" name="SMDSTROOK" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="131" name="tAdjust" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="132" name="bAdjust" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="133" name="bottom_silk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="144" name="Drill_legend" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="150" name="Notes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="151" name="HeatSink" color="7" fill="1" visible="yes" active="yes"/>
@@ -11833,6 +11840,151 @@ PNP complement: PMBT3906.&lt;/h&gt;</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="Seeed-IC-2016">
+<packages>
+<package name="TSSOP20-0.65-6.5X4.4MM">
+<wire x1="-3.25" y1="2.2" x2="3.25" y2="2.2" width="0.127" layer="21"/>
+<wire x1="3.25" y1="2.2" x2="3.25" y2="-2.2" width="0.127" layer="21"/>
+<wire x1="3.25" y1="-2.2" x2="-2.945615625" y2="-2.2" width="0.127" layer="21"/>
+<wire x1="-2.945615625" y1="-2.2" x2="-3.25" y2="-1.895615625" width="0.127" layer="21"/>
+<wire x1="-3.25" y1="-1.895615625" x2="-3.25" y2="2.2" width="0.127" layer="21"/>
+<circle x="-3.81" y="-2.54" radius="0.381" width="0" layer="21"/>
+<smd name="1" x="-2.925" y="-3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="2" x="-2.275" y="-3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="3" x="-1.625" y="-3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="4" x="-0.975" y="-3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="5" x="-0.325" y="-3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="6" x="0.325" y="-3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="7" x="0.975" y="-3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="8" x="1.625" y="-3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="9" x="2.275" y="-3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="10" x="2.925" y="-3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="11" x="2.91" y="3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="12" x="2.26" y="3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="13" x="1.61" y="3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="14" x="0.96" y="3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="15" x="0.325" y="3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="16" x="-0.325" y="3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="17" x="-0.975" y="3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="18" x="-1.625" y="3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="19" x="-2.275" y="3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="20" x="-2.925" y="3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<text x="-2.54" y="4.445" size="0.889" layer="25" ratio="11">&gt;NAME</text>
+<text x="-2.54" y="-0.635" size="0.889" layer="27" ratio="11">&gt;VALUE</text>
+<rectangle x1="-3.25" y1="-2.275" x2="3.25" y2="2.275" layer="39"/>
+</package>
+</packages>
+<symbols>
+<symbol name="TRANSLATOR-TXS0108E">
+<pin name="A1" x="-12.7" y="7.62" length="short"/>
+<pin name="VCCA" x="-2.54" y="16.51" length="short" rot="R270"/>
+<pin name="A2" x="-12.7" y="5.08" length="short"/>
+<pin name="A3" x="-12.7" y="2.54" length="short"/>
+<pin name="A4" x="-12.7" y="0" length="short"/>
+<pin name="A5" x="-12.7" y="-2.54" length="short"/>
+<pin name="A6" x="-12.7" y="-5.08" length="short"/>
+<pin name="A7" x="-12.7" y="-7.62" length="short"/>
+<pin name="A8" x="-12.7" y="-10.16" length="short"/>
+<pin name="OE" x="-12.7" y="10.16" length="short"/>
+<pin name="GND" x="0" y="-16.51" length="short" rot="R90"/>
+<pin name="B8" x="12.7" y="-10.16" length="short" rot="R180"/>
+<pin name="B7" x="12.7" y="-7.62" length="short" rot="R180"/>
+<pin name="B6" x="12.7" y="-5.08" length="short" rot="R180"/>
+<pin name="B5" x="12.7" y="-2.54" length="short" rot="R180"/>
+<pin name="B4" x="12.7" y="0" length="short" rot="R180"/>
+<pin name="B3" x="12.7" y="2.54" length="short" rot="R180"/>
+<pin name="B2" x="12.7" y="5.08" length="short" rot="R180"/>
+<pin name="VCCB" x="2.54" y="16.51" length="short" rot="R270"/>
+<pin name="B1" x="12.7" y="7.62" length="short" rot="R180"/>
+<wire x1="-8.89" y1="12.7" x2="-2.54" y2="12.7" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="12.7" x2="2.54" y2="12.7" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="12.7" x2="8.89" y2="12.7" width="0.1524" layer="94"/>
+<wire x1="8.89" y1="12.7" x2="8.89" y2="7.62" width="0.1524" layer="94"/>
+<wire x1="8.89" y1="7.62" x2="8.89" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="8.89" y1="5.08" x2="8.89" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="8.89" y1="2.54" x2="8.89" y2="0" width="0.1524" layer="94"/>
+<wire x1="8.89" y1="0" x2="8.89" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="8.89" y1="-2.54" x2="8.89" y2="-5.08" width="0.1524" layer="94"/>
+<wire x1="8.89" y1="-7.62" x2="8.89" y2="-10.16" width="0.1524" layer="94"/>
+<wire x1="8.89" y1="-10.16" x2="8.89" y2="-12.7" width="0.1524" layer="94"/>
+<wire x1="8.89" y1="-12.7" x2="0" y2="-12.7" width="0.1524" layer="94"/>
+<wire x1="0" y1="-12.7" x2="-8.89" y2="-12.7" width="0.1524" layer="94"/>
+<wire x1="-8.89" y1="-12.7" x2="-8.89" y2="-10.16" width="0.1524" layer="94"/>
+<wire x1="-8.89" y1="-10.16" x2="-8.89" y2="-7.62" width="0.1524" layer="94"/>
+<wire x1="-8.89" y1="-7.62" x2="-8.89" y2="-5.08" width="0.1524" layer="94"/>
+<wire x1="-8.89" y1="-5.08" x2="-8.89" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="-8.89" y1="-2.54" x2="-8.89" y2="0" width="0.1524" layer="94"/>
+<wire x1="-8.89" y1="0" x2="-8.89" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="-8.89" y1="2.54" x2="-8.89" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="-8.89" y1="5.08" x2="-8.89" y2="7.62" width="0.1524" layer="94"/>
+<wire x1="-8.89" y1="7.62" x2="-8.89" y2="10.16" width="0.1524" layer="94"/>
+<wire x1="-8.89" y1="10.16" x2="-8.89" y2="12.7" width="0.1524" layer="94"/>
+<wire x1="-2.54" y1="13.97" x2="-2.54" y2="12.7" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="13.97" x2="2.54" y2="12.7" width="0.1524" layer="94"/>
+<wire x1="10.16" y1="7.62" x2="8.89" y2="7.62" width="0.1524" layer="94"/>
+<wire x1="10.16" y1="5.08" x2="8.89" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="10.16" y1="2.54" x2="8.89" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="10.16" y1="0" x2="8.89" y2="0" width="0.1524" layer="94"/>
+<wire x1="10.16" y1="-2.54" x2="8.89" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="10.16" y1="-5.08" x2="8.89" y2="-5.08" width="0.1524" layer="94"/>
+<wire x1="8.89" y1="-5.08" x2="8.89" y2="-7.62" width="0.1524" layer="94"/>
+<wire x1="10.16" y1="-7.62" x2="8.89" y2="-7.62" width="0.1524" layer="94"/>
+<wire x1="10.16" y1="-10.16" x2="8.89" y2="-10.16" width="0.1524" layer="94"/>
+<wire x1="-10.16" y1="-10.16" x2="-8.89" y2="-10.16" width="0.1524" layer="94"/>
+<wire x1="-10.16" y1="-7.62" x2="-8.89" y2="-7.62" width="0.1524" layer="94"/>
+<wire x1="-10.16" y1="-5.08" x2="-8.89" y2="-5.08" width="0.1524" layer="94"/>
+<wire x1="-10.16" y1="-2.54" x2="-8.89" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="-10.16" y1="0" x2="-8.89" y2="0" width="0.1524" layer="94"/>
+<wire x1="-10.16" y1="2.54" x2="-8.89" y2="2.54" width="0.1524" layer="94"/>
+<wire x1="-10.16" y1="5.08" x2="-8.89" y2="5.08" width="0.1524" layer="94"/>
+<wire x1="-10.16" y1="7.62" x2="-8.89" y2="7.62" width="0.1524" layer="94"/>
+<text x="-8.89" y="13.97" size="1.27" layer="95" ratio="10">&gt;NAME</text>
+<text x="3.81" y="13.97" size="1.27" layer="96" ratio="10">&gt;VALUE</text>
+<wire x1="-10.16" y1="10.16" x2="-8.89" y2="10.16" width="0.1524" layer="94"/>
+<wire x1="0" y1="-13.97" x2="0" y2="-12.7" width="0.1524" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="LOGIC-TXS0108EPWR(TSSOP20)" prefix="U" uservalue="yes">
+<description>310050026</description>
+<gates>
+<gate name="G$1" symbol="TRANSLATOR-TXS0108E" x="-5.08" y="5.08"/>
+</gates>
+<devices>
+<device name="" package="TSSOP20-0.65-6.5X4.4MM">
+<connects>
+<connect gate="G$1" pin="A1" pad="1"/>
+<connect gate="G$1" pin="A2" pad="3"/>
+<connect gate="G$1" pin="A3" pad="4"/>
+<connect gate="G$1" pin="A4" pad="5"/>
+<connect gate="G$1" pin="A5" pad="6"/>
+<connect gate="G$1" pin="A6" pad="7"/>
+<connect gate="G$1" pin="A7" pad="8"/>
+<connect gate="G$1" pin="A8" pad="9"/>
+<connect gate="G$1" pin="B1" pad="20"/>
+<connect gate="G$1" pin="B2" pad="18"/>
+<connect gate="G$1" pin="B3" pad="17"/>
+<connect gate="G$1" pin="B4" pad="16"/>
+<connect gate="G$1" pin="B5" pad="15"/>
+<connect gate="G$1" pin="B6" pad="14"/>
+<connect gate="G$1" pin="B7" pad="13"/>
+<connect gate="G$1" pin="B8" pad="12"/>
+<connect gate="G$1" pin="GND" pad="11"/>
+<connect gate="G$1" pin="OE" pad="10"/>
+<connect gate="G$1" pin="VCCA" pad="2"/>
+<connect gate="G$1" pin="VCCB" pad="19"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="MPN" value="TXS0108EPWR"/>
+<attribute name="VALUE" value="TXS0108EPWR-TSSOP20" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -11894,6 +12046,7 @@ PNP complement: PMBT3906.&lt;/h&gt;</description>
 <part name="+3V2" library="supply1" deviceset="+3V3" device=""/>
 <part name="R7" library="rcl" deviceset="R-US_" device="R0805" value="0"/>
 <part name="U1" library="partes v2" deviceset="AD8192" device=""/>
+<part name="U3" library="Seeed-IC-2016" deviceset="LOGIC-TXS0108EPWR(TSSOP20)" device="" value="TXS0108EPWR-TSSOP20"/>
 </parts>
 <sheets>
 <sheet>
@@ -11957,6 +12110,7 @@ PNP complement: PMBT3906.&lt;/h&gt;</description>
 <instance part="+3V2" gate="G$1" x="170.18" y="137.16"/>
 <instance part="R7" gate="G$1" x="43.18" y="129.54" rot="R180"/>
 <instance part="U1" gate="G$1" x="238.76" y="71.12"/>
+<instance part="U3" gate="G$1" x="144.78" y="127"/>
 </instances>
 <busses>
 </busses>

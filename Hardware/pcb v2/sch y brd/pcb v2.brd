@@ -90,8 +90,13 @@
 <layer number="111" name="LPC17xx" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="112" name="tSilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="113" name="IDFDebug" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="114" name="FRNTMAAT1" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="115" name="FRNTMAAT2" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="116" name="Patch_BOT" color="9" fill="4" visible="yes" active="yes"/>
+<layer number="117" name="BACKMAAT1" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="118" name="Rect_Pads" color="7" fill="1" visible="no" active="no"/>
+<layer number="119" name="KAP_TEKEN" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="120" name="KAP_MAAT1" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="121" name="_tsilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="122" name="_bsilk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="123" name="tTestmark" color="7" fill="1" visible="yes" active="yes"/>
@@ -101,8 +106,10 @@
 <layer number="127" name="_tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="128" name="_bValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="129" name="Mask" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="130" name="SMDSTROOK" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="131" name="tAdjust" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="132" name="bAdjust" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="133" name="bottom_silk" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="144" name="Drill_legend" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="150" name="Notes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="151" name="HeatSink" color="7" fill="1" visible="yes" active="yes"/>
@@ -1917,6 +1924,41 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </package>
 </packages>
 </library>
+<library name="Seeed-IC-2016">
+<packages>
+<package name="TSSOP20-0.65-6.5X4.4MM">
+<wire x1="-3.25" y1="2.2" x2="3.25" y2="2.2" width="0.127" layer="21"/>
+<wire x1="3.25" y1="2.2" x2="3.25" y2="-2.2" width="0.127" layer="21"/>
+<wire x1="3.25" y1="-2.2" x2="-2.945615625" y2="-2.2" width="0.127" layer="21"/>
+<wire x1="-2.945615625" y1="-2.2" x2="-3.25" y2="-1.895615625" width="0.127" layer="21"/>
+<wire x1="-3.25" y1="-1.895615625" x2="-3.25" y2="2.2" width="0.127" layer="21"/>
+<circle x="-3.81" y="-2.54" radius="0.381" width="0" layer="21"/>
+<smd name="1" x="-2.925" y="-3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="2" x="-2.275" y="-3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="3" x="-1.625" y="-3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="4" x="-0.975" y="-3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="5" x="-0.325" y="-3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="6" x="0.325" y="-3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="7" x="0.975" y="-3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="8" x="1.625" y="-3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="9" x="2.275" y="-3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="10" x="2.925" y="-3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="11" x="2.91" y="3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="12" x="2.26" y="3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="13" x="1.61" y="3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="14" x="0.96" y="3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="15" x="0.325" y="3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="16" x="-0.325" y="3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="17" x="-0.975" y="3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="18" x="-1.625" y="3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="19" x="-2.275" y="3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<smd name="20" x="-2.925" y="3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
+<text x="-2.54" y="4.445" size="0.889" layer="25" ratio="11">&gt;NAME</text>
+<text x="-2.54" y="-0.635" size="0.889" layer="27" ratio="11">&gt;VALUE</text>
+<rectangle x1="-3.25" y1="-2.275" x2="3.25" y2="2.275" layer="39"/>
+</package>
+</packages>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -2155,6 +2197,9 @@ design rules under a new name.</description>
 <element name="JP1" library="SparkFun-Connectors" package="1X08" value="" x="-1.27" y="-195.58"/>
 <element name="R7" library="rcl" package="R0805" value="0" x="-1.27" y="-200.66"/>
 <element name="U1" library="partes v2" package="LFCSP56" value="AD8192" x="-8.89" y="-196.85"/>
+<element name="U3" library="Seeed-IC-2016" package="TSSOP20-0.65-6.5X4.4MM" value="TXS0108EPWR-TSSOP20" x="-17.78" y="-199.39">
+<attribute name="MPN" value="TXS0108EPWR" x="-17.78" y="-199.39" size="1.778" layer="27" display="off"/>
+</element>
 </elements>
 <signals>
 <signal name="GND">
