@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="7.5.0">
+<eagle version="7.2.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="no"/>
@@ -2127,6 +2127,33 @@ or will meet your specific requirements.&lt;p&gt;
 <wire x1="4.5" y1="-6.5" x2="4.5" y2="-5" width="0.2" layer="51"/>
 <text x="-9.5" y="3" size="1.27" layer="25" font="vector" ratio="10" rot="R90" align="center">&gt;Name</text>
 </package>
+<package name="SOP8">
+<wire x1="2.4" y1="1.9" x2="2.4" y2="-1.4" width="0.2032" layer="51"/>
+<wire x1="2.4" y1="-1.4" x2="2.4" y2="-1.9" width="0.2032" layer="51"/>
+<wire x1="2.4" y1="-1.9" x2="-2.4" y2="-1.9" width="0.2032" layer="51"/>
+<wire x1="-2.4" y1="-1.9" x2="-2.4" y2="-1.4" width="0.2032" layer="51"/>
+<wire x1="-2.4" y1="-1.4" x2="-2.4" y2="1.9" width="0.2032" layer="51"/>
+<wire x1="-2.4" y1="1.9" x2="2.4" y2="1.9" width="0.2032" layer="51"/>
+<wire x1="2.4" y1="-1.4" x2="-2.4" y2="-1.4" width="0.2032" layer="51"/>
+<smd name="2" x="-0.635" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="7" x="-0.635" y="2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="1" x="-1.905" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="3" x="0.635" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="4" x="1.905" y="-2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="8" x="-1.905" y="2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="6" x="0.635" y="2.6" dx="0.6" dy="2.2" layer="1"/>
+<smd name="5" x="1.905" y="2.6" dx="0.6" dy="2.2" layer="1"/>
+<text x="-2.667" y="-1.905" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+<text x="3.937" y="-1.905" size="1.27" layer="27" rot="R90">&gt;VALUE</text>
+<rectangle x1="-2.15" y1="-3.1" x2="-1.66" y2="-2" layer="51"/>
+<rectangle x1="-0.88" y1="-3.1" x2="-0.39" y2="-2" layer="51"/>
+<rectangle x1="0.39" y1="-3.1" x2="0.88" y2="-2" layer="51"/>
+<rectangle x1="1.66" y1="-3.1" x2="2.15" y2="-2" layer="51"/>
+<rectangle x1="1.66" y1="2" x2="2.15" y2="3.1" layer="51"/>
+<rectangle x1="0.39" y1="2" x2="0.88" y2="3.1" layer="51"/>
+<rectangle x1="-0.88" y1="2" x2="-0.39" y2="3.1" layer="51"/>
+<rectangle x1="-2.15" y1="2" x2="-1.66" y2="3.1" layer="51"/>
+</package>
 </packages>
 </library>
 <library name="ADI-Phase-2">
@@ -2443,6 +2470,9 @@ design rules under a new name.</description>
 </element>
 <element name="C16" library="rcl" package="E2,5-6" value="1000uF" x="-8.89" y="-384.81"/>
 <element name="C17" library="rcl" package="E2,5-6" value="10uF" x="-21.59" y="-393.7"/>
+<element name="R17" library="rcl" package="R0805" value="10k" x="-22.86" y="-400.05"/>
+<element name="U4" library="partes v2" package="SOP8" value="MB85RS16N" x="-30.48" y="-398.78"/>
+<element name="C18" library="rcl" package="C0805" value="100nF" x="-31.75" y="-406.4"/>
 </elements>
 <signals>
 <signal name="GND">
@@ -2495,6 +2525,8 @@ design rules under a new name.</description>
 <contactref element="J2" pad="P$11"/>
 <contactref element="J2" pad="P$8"/>
 <contactref element="J2" pad="P$5"/>
+<contactref element="U4" pad="4"/>
+<contactref element="C18" pad="2"/>
 <wire x1="-18.1" y1="-226.06" x2="-18.1" y2="-232.41" width="0" layer="19" extent="1-1"/>
 <wire x1="-4.12" y1="-258.35" x2="-18.1" y2="-232.41" width="0" layer="19" extent="1-1"/>
 <wire x1="-7.3" y1="-265.43" x2="-4.12" y2="-258.35" width="0" layer="19" extent="1-1"/>
@@ -2531,6 +2563,8 @@ design rules under a new name.</description>
 <wire x1="-16.59" y1="-386.08" x2="-22.2504" y2="-372.3386" width="0" layer="19" extent="1-1"/>
 <wire x1="-20.32" y1="-393.7" x2="-16.59" y2="-386.08" width="0" layer="19" extent="1-1"/>
 <wire x1="-7.62" y1="-384.81" x2="-16.59" y2="-386.08" width="0" layer="19" extent="1-1"/>
+<wire x1="-28.575" y1="-401.38" x2="-20.32" y2="-393.7" width="0" layer="19" extent="1-1"/>
+<wire x1="-30.8" y1="-406.4" x2="-28.575" y2="-401.38" width="0" layer="19" extent="1-1"/>
 <wire x1="1.59" y1="-96.52" x2="8.89" y2="-132.08" width="0" layer="19" extent="1-1"/>
 <wire x1="3.49" y1="-68.58" x2="1.59" y2="-96.52" width="0" layer="19" extent="1-1"/>
 <wire x1="3.49" y1="-62.23" x2="3.49" y2="-68.58" width="0" layer="19" extent="1-1"/>
@@ -2725,17 +2759,23 @@ design rules under a new name.</description>
 <signal name="RFID_MISO_3V3">
 <contactref element="JP1" pad="4"/>
 <contactref element="U3" pad="5"/>
+<contactref element="U4" pad="2"/>
 <wire x1="6.35" y1="-195.58" x2="-18.105" y2="-202.455" width="0" layer="19" extent="1-1"/>
+<wire x1="-31.115" y1="-401.38" x2="-18.105" y2="-202.455" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="RFID_MOSI_3V3">
 <contactref element="JP1" pad="3"/>
 <contactref element="U3" pad="4"/>
+<contactref element="U4" pad="5"/>
 <wire x1="3.81" y1="-195.58" x2="-18.755" y2="-202.455" width="0" layer="19" extent="1-1"/>
+<wire x1="-28.575" y1="-396.18" x2="-18.755" y2="-202.455" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="RFID_SCK_3V3">
 <contactref element="JP1" pad="2"/>
 <contactref element="U3" pad="3"/>
+<contactref element="U4" pad="6"/>
 <wire x1="1.27" y1="-195.58" x2="-19.405" y2="-202.455" width="0" layer="19" extent="1-1"/>
+<wire x1="-29.845" y1="-396.18" x2="-19.405" y2="-202.455" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="RFID_SS_3V3">
 <contactref element="JP1" pad="1"/>
@@ -2762,6 +2802,8 @@ design rules under a new name.</description>
 <contactref element="U1" pad="4"/>
 <contactref element="U1" pad="2"/>
 <contactref element="C17" pad="+"/>
+<contactref element="C18" pad="1"/>
+<contactref element="U4" pad="8"/>
 <wire x1="-20.32" y1="-258.35" x2="-20" y2="-232.41" width="0" layer="19" extent="1-1"/>
 <wire x1="-20.45" y1="-265.43" x2="-20.32" y2="-258.35" width="0" layer="19" extent="1-1"/>
 <wire x1="-18.1" y1="-271.78" x2="-20.45" y2="-265.43" width="0" layer="19" extent="1-1"/>
@@ -2775,6 +2817,8 @@ design rules under a new name.</description>
 <wire x1="-15.8496" y1="-374.65" x2="-18.1" y2="-284.48" width="0" layer="19" extent="1-1"/>
 <wire x1="-22.2504" y1="-374.65" x2="-15.8496" y2="-374.65" width="0" layer="19" extent="1-1"/>
 <wire x1="-22.86" y1="-393.7" x2="-22.2504" y2="-374.65" width="0" layer="19" extent="1-1"/>
+<wire x1="-32.385" y1="-396.18" x2="-22.86" y2="-393.7" width="0" layer="19" extent="1-1"/>
+<wire x1="-32.7" y1="-406.4" x2="-32.385" y2="-396.18" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$7">
 <contactref element="C9" pad="2"/>
@@ -2900,16 +2944,18 @@ design rules under a new name.</description>
 <contactref element="J2" pad="P$19"/>
 <wire x1="-18.47" y1="-316.29" x2="-18.47" y2="-332.8" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="HDMI_IN_5V">
+<signal name="HDMI_A_5V">
 <contactref element="J3" pad="P$18"/>
 <contactref element="K1" pad="4"/>
 <contactref element="R16" pad="1"/>
 <wire x1="-17.97" y1="-332.8" x2="-23.81" y2="-347.98" width="0" layer="19" extent="1-1"/>
 <wire x1="-12.8" y1="-297.015" x2="-17.97" y2="-332.8" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="N$35">
+<signal name="HDMI_B_5V">
 <contactref element="K1" pad="5"/>
 <contactref element="J2" pad="P$18"/>
+<contactref element="R17" pad="1"/>
+<wire x1="-17.97" y1="-316.29" x2="-23.81" y2="-400.05" width="0" layer="19" extent="1-1"/>
 <wire x1="-10.26" y1="-297.015" x2="-17.97" y2="-316.29" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$34">
@@ -2921,6 +2967,21 @@ design rules under a new name.</description>
 <contactref element="JP2" pad="1"/>
 <contactref element="S1" pad="2"/>
 <wire x1="-20.32" y1="-361.95" x2="-21.59" y2="-386.08" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$37">
+<contactref element="U2" pad="26"/>
+<contactref element="R17" pad="2"/>
+<wire x1="7.08" y1="-2.0574" x2="-21.91" y2="-400.05" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$39">
+<contactref element="U4" pad="1"/>
+<contactref element="U3" pad="8"/>
+<wire x1="-32.385" y1="-401.38" x2="-16.155" y2="-202.455" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$40">
+<contactref element="U4" pad="7"/>
+<contactref element="U3" pad="9"/>
+<wire x1="-31.115" y1="-396.18" x2="-15.505" y2="-202.455" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 </board>
