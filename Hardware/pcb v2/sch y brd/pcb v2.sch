@@ -20241,6 +20241,8 @@ Tyco Electronics</description>
 <class number="3" name="usbvcc" width="0.508" drill="0.6096">
 <clearance class="3" value="0.254"/>
 </class>
+<class number="4" name="hdmi" width="2.54" drill="0">
+</class>
 <class number="6" name="1V8" width="0.254" drill="0.3">
 <clearance class="2" value="0.6"/>
 <clearance class="3" value="0.6"/>
@@ -20486,8 +20488,8 @@ Tyco Electronics</description>
 <instance part="JP2" gate="G$1" x="330.2" y="43.18"/>
 <instance part="JP4" gate="G$1" x="419.1" y="17.78"/>
 <instance part="GND23" gate="1" x="408.94" y="5.08"/>
-<instance part="P+8" gate="1" x="408.94" y="40.64"/>
-<instance part="+3V38" gate="G$1" x="434.34" y="40.64"/>
+<instance part="P+8" gate="1" x="391.16" y="33.02"/>
+<instance part="+3V38" gate="G$1" x="398.78" y="33.02"/>
 <instance part="JP1" gate="G$1" x="304.8" y="10.16"/>
 <instance part="P+6" gate="1" x="317.5" y="20.32"/>
 <instance part="GND17" gate="1" x="317.5" y="0"/>
@@ -20764,12 +20766,12 @@ Tyco Electronics</description>
 <wire x1="414.02" y1="17.78" x2="408.94" y2="17.78" width="0.1524" layer="91"/>
 <pinref part="GND23" gate="1" pin="GND"/>
 <wire x1="408.94" y1="7.62" x2="408.94" y2="10.16" width="0.1524" layer="91"/>
-<pinref part="JP4" gate="G$1" pin="12"/>
 <wire x1="408.94" y1="10.16" x2="408.94" y2="17.78" width="0.1524" layer="91"/>
-<wire x1="429.26" y1="17.78" x2="434.34" y2="17.78" width="0.1524" layer="91"/>
-<wire x1="434.34" y1="17.78" x2="434.34" y2="10.16" width="0.1524" layer="91"/>
-<wire x1="434.34" y1="10.16" x2="408.94" y2="10.16" width="0.1524" layer="91"/>
+<wire x1="444.5" y1="10.16" x2="408.94" y2="10.16" width="0.1524" layer="91"/>
 <junction x="408.94" y="10.16"/>
+<wire x1="444.5" y1="10.16" x2="444.5" y2="30.48" width="0.1524" layer="91"/>
+<pinref part="JP4" gate="G$1" pin="2"/>
+<wire x1="444.5" y1="30.48" x2="429.26" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="JP1" gate="G$1" pin="1"/>
@@ -20896,16 +20898,16 @@ Tyco Electronics</description>
 <wire x1="441.96" y1="119.38" x2="441.96" y2="114.3" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="JP4" gate="G$1" pin="1"/>
-<wire x1="414.02" y1="30.48" x2="408.94" y2="30.48" width="0.1524" layer="91"/>
-<pinref part="P+8" gate="1" pin="+5V"/>
-<wire x1="408.94" y1="30.48" x2="408.94" y2="38.1" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="JP1" gate="G$1" pin="3"/>
 <wire x1="312.42" y1="12.7" x2="317.5" y2="12.7" width="0.1524" layer="91"/>
 <wire x1="317.5" y1="12.7" x2="317.5" y2="17.78" width="0.1524" layer="91"/>
 <pinref part="P+6" gate="1" pin="+5V"/>
+</segment>
+<segment>
+<pinref part="JP4" gate="G$1" pin="9"/>
+<pinref part="P+8" gate="1" pin="+5V"/>
+<wire x1="414.02" y1="20.32" x2="391.16" y2="20.32" width="0.1524" layer="91"/>
+<wire x1="391.16" y1="20.32" x2="391.16" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="BUZZER" class="0">
@@ -21346,10 +21348,10 @@ Tyco Electronics</description>
 <wire x1="274.32" y1="0" x2="274.32" y2="10.16" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="JP4" gate="G$1" pin="2"/>
-<wire x1="429.26" y1="30.48" x2="434.34" y2="30.48" width="0.1524" layer="91"/>
 <pinref part="+3V38" gate="G$1" pin="+3V3"/>
-<wire x1="434.34" y1="30.48" x2="434.34" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="398.78" y1="30.48" x2="398.78" y2="22.86" width="0.1524" layer="91"/>
+<pinref part="JP4" gate="G$1" pin="7"/>
+<wire x1="398.78" y1="22.86" x2="414.02" y2="22.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$8" class="0">
@@ -21489,60 +21491,68 @@ Tyco Electronics</description>
 <wire x1="162.56" y1="116.84" x2="170.18" y2="116.84" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="N$9" class="0">
+<net name="TX2_P" class="4">
 <segment>
 <pinref part="J3" gate="G$1" pin="TX2_P"/>
 <pinref part="J4" gate="G$1" pin="TX2_P"/>
 <wire x1="266.7" y1="193.04" x2="292.1" y2="193.04" width="0.1524" layer="91"/>
+<label x="269.24" y="193.04" size="1.27" layer="95"/>
 </segment>
 </net>
-<net name="N$23" class="0">
+<net name="TX2_N" class="4">
 <segment>
 <pinref part="J3" gate="G$1" pin="TX2_N"/>
 <pinref part="J4" gate="G$1" pin="TX2_N"/>
 <wire x1="266.7" y1="190.5" x2="292.1" y2="190.5" width="0.1524" layer="91"/>
+<label x="269.24" y="190.5" size="1.27" layer="95"/>
 </segment>
 </net>
-<net name="N$24" class="0">
+<net name="TX1_P" class="4">
 <segment>
 <pinref part="J3" gate="G$1" pin="TX1_P"/>
 <pinref part="J4" gate="G$1" pin="TX1_P"/>
 <wire x1="266.7" y1="187.96" x2="292.1" y2="187.96" width="0.1524" layer="91"/>
+<label x="269.24" y="187.96" size="1.27" layer="95"/>
 </segment>
 </net>
-<net name="N$25" class="0">
+<net name="TX1_N" class="4">
 <segment>
 <pinref part="J3" gate="G$1" pin="TX1_N"/>
 <pinref part="J4" gate="G$1" pin="TX1_N"/>
 <wire x1="266.7" y1="185.42" x2="292.1" y2="185.42" width="0.1524" layer="91"/>
+<label x="269.24" y="185.42" size="1.27" layer="95"/>
 </segment>
 </net>
-<net name="N$26" class="0">
+<net name="TX0_P" class="4">
 <segment>
 <pinref part="J3" gate="G$1" pin="TX0_P"/>
 <pinref part="J4" gate="G$1" pin="TX0_P"/>
 <wire x1="266.7" y1="182.88" x2="292.1" y2="182.88" width="0.1524" layer="91"/>
+<label x="269.24" y="182.88" size="1.27" layer="95"/>
 </segment>
 </net>
-<net name="N$27" class="0">
+<net name="TX0_N" class="4">
 <segment>
 <pinref part="J3" gate="G$1" pin="TX0_N"/>
 <pinref part="J4" gate="G$1" pin="TX0_N"/>
 <wire x1="266.7" y1="180.34" x2="292.1" y2="180.34" width="0.1524" layer="91"/>
+<label x="269.24" y="180.34" size="1.27" layer="95"/>
 </segment>
 </net>
-<net name="N$28" class="0">
+<net name="CLK_P" class="4">
 <segment>
 <pinref part="J3" gate="G$1" pin="CLK_P"/>
 <pinref part="J4" gate="G$1" pin="CLK_P"/>
 <wire x1="266.7" y1="177.8" x2="292.1" y2="177.8" width="0.1524" layer="91"/>
+<label x="269.24" y="177.8" size="1.27" layer="95"/>
 </segment>
 </net>
-<net name="N$29" class="0">
+<net name="CLK_N" class="4">
 <segment>
 <pinref part="J3" gate="G$1" pin="CLK_N"/>
 <pinref part="J4" gate="G$1" pin="CLK_N"/>
 <wire x1="266.7" y1="175.26" x2="292.1" y2="175.26" width="0.1524" layer="91"/>
+<label x="269.24" y="175.26" size="1.27" layer="95"/>
 </segment>
 </net>
 <net name="N$30" class="0">
@@ -21700,9 +21710,9 @@ Tyco Electronics</description>
 <label x="121.92" y="60.96" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="JP4" gate="G$1" pin="7"/>
-<wire x1="414.02" y1="22.86" x2="408.94" y2="22.86" width="0.1524" layer="91"/>
-<label x="408.94" y="22.86" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="JP4" gate="G$1" pin="1"/>
+<wire x1="414.02" y1="30.48" x2="408.94" y2="30.48" width="0.1524" layer="91"/>
+<label x="408.94" y="30.48" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="PD4" class="0">
@@ -21712,9 +21722,9 @@ Tyco Electronics</description>
 <label x="121.92" y="58.42" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="JP4" gate="G$1" pin="9"/>
-<wire x1="414.02" y1="20.32" x2="408.94" y2="20.32" width="0.1524" layer="91"/>
-<label x="408.94" y="20.32" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="JP4" gate="G$1" pin="12"/>
+<wire x1="429.26" y1="17.78" x2="434.34" y2="17.78" width="0.1524" layer="91"/>
+<label x="434.34" y="17.78" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="PD5" class="0">
