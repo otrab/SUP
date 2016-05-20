@@ -17473,22 +17473,12 @@ Tyco Electronics</description>
 <variantdefs>
 </variantdefs>
 <classes>
-<class number="0" name="default" width="0" drill="0">
+<class number="0" name="default" width="0.254" drill="0">
 </class>
-<class number="1" name="USB" width="0.254" drill="0.3302">
-<clearance class="1" value="0.15875"/>
+<class number="1" name="hdmi" width="0.3" drill="0">
+<clearance class="1" value="0.1778"/>
 </class>
-<class number="2" name="gnd" width="0.3048" drill="0.5588">
-<clearance class="2" value="0.254"/>
-</class>
-<class number="3" name="usbvcc" width="0.508" drill="0.6096">
-<clearance class="3" value="0.254"/>
-</class>
-<class number="4" name="hdmi" width="2.54" drill="0">
-</class>
-<class number="6" name="1V8" width="0.254" drill="0.3">
-<clearance class="2" value="0.6"/>
-<clearance class="3" value="0.6"/>
+<class number="2" name="gnd-hdmi" width="0.254" drill="0">
 </class>
 </classes>
 <parts>
@@ -17733,7 +17723,7 @@ Tyco Electronics</description>
 <busses>
 </busses>
 <nets>
-<net name="GND" class="0">
+<net name="GND" class="2">
 <segment>
 <pinref part="U1" gate="G$1" pin="AGND"/>
 <wire x1="60.96" y1="40.64" x2="68.58" y2="40.64" width="0.1524" layer="91"/>
@@ -18703,7 +18693,7 @@ Tyco Electronics</description>
 <wire x1="162.56" y1="116.84" x2="170.18" y2="116.84" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="TX2_P" class="4">
+<net name="TX2_P" class="1">
 <segment>
 <pinref part="J3" gate="G$1" pin="TX2_P"/>
 <pinref part="J4" gate="G$1" pin="TX2_P"/>
@@ -18711,7 +18701,7 @@ Tyco Electronics</description>
 <label x="269.24" y="193.04" size="1.27" layer="95"/>
 </segment>
 </net>
-<net name="TX2_N" class="4">
+<net name="TX2_N" class="1">
 <segment>
 <pinref part="J3" gate="G$1" pin="TX2_N"/>
 <pinref part="J4" gate="G$1" pin="TX2_N"/>
@@ -18719,7 +18709,7 @@ Tyco Electronics</description>
 <label x="269.24" y="190.5" size="1.27" layer="95"/>
 </segment>
 </net>
-<net name="TX1_P" class="4">
+<net name="TX1_P" class="1">
 <segment>
 <pinref part="J3" gate="G$1" pin="TX1_P"/>
 <pinref part="J4" gate="G$1" pin="TX1_P"/>
@@ -18727,7 +18717,7 @@ Tyco Electronics</description>
 <label x="269.24" y="187.96" size="1.27" layer="95"/>
 </segment>
 </net>
-<net name="TX1_N" class="4">
+<net name="TX1_N" class="1">
 <segment>
 <pinref part="J3" gate="G$1" pin="TX1_N"/>
 <pinref part="J4" gate="G$1" pin="TX1_N"/>
@@ -18735,7 +18725,7 @@ Tyco Electronics</description>
 <label x="269.24" y="185.42" size="1.27" layer="95"/>
 </segment>
 </net>
-<net name="TX0_P" class="4">
+<net name="TX0_P" class="1">
 <segment>
 <pinref part="J3" gate="G$1" pin="TX0_P"/>
 <pinref part="J4" gate="G$1" pin="TX0_P"/>
@@ -18743,7 +18733,7 @@ Tyco Electronics</description>
 <label x="269.24" y="182.88" size="1.27" layer="95"/>
 </segment>
 </net>
-<net name="TX0_N" class="4">
+<net name="TX0_N" class="1">
 <segment>
 <pinref part="J3" gate="G$1" pin="TX0_N"/>
 <pinref part="J4" gate="G$1" pin="TX0_N"/>
@@ -18751,7 +18741,7 @@ Tyco Electronics</description>
 <label x="269.24" y="180.34" size="1.27" layer="95"/>
 </segment>
 </net>
-<net name="CLK_P" class="4">
+<net name="CLK_P" class="1">
 <segment>
 <pinref part="J3" gate="G$1" pin="CLK_P"/>
 <pinref part="J4" gate="G$1" pin="CLK_P"/>
@@ -18759,7 +18749,7 @@ Tyco Electronics</description>
 <label x="269.24" y="177.8" size="1.27" layer="95"/>
 </segment>
 </net>
-<net name="CLK_N" class="4">
+<net name="CLK_N" class="1">
 <segment>
 <pinref part="J3" gate="G$1" pin="CLK_N"/>
 <pinref part="J4" gate="G$1" pin="CLK_N"/>
