@@ -734,7 +734,7 @@ This is the reduced ISP connector for AVR programming. Common on Arduino. This f
 </device>
 </devices>
 </deviceset>
-<deviceset name="M03X2" prefix="JP" uservalue="yes">
+<deviceset name="M03X2" prefix="J" uservalue="yes">
 <description>2x3 .1" header.&lt;br&gt;
 Shrouded, with keying- CONN-10681&lt;br&gt;
 SMT- CONN-11415&lt;br&gt;
@@ -864,7 +864,7 @@ Pogo pins- HW-11044</description>
 </device>
 </devices>
 </deviceset>
-<deviceset name="M06X2" prefix="JP">
+<deviceset name="M06X2" prefix="J">
 <gates>
 <gate name="G$1" symbol="M06X2" x="0" y="0"/>
 </gates>
@@ -13112,9 +13112,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <package name="SO08">
 <description>&lt;b&gt;Small Outline Package&lt;/b&gt; Fits JEDEC packages (narrow SOIC-8)</description>
 <wire x1="-2.362" y1="-1.803" x2="2.362" y2="-1.803" width="0.1524" layer="51"/>
-<wire x1="2.362" y1="-1.803" x2="2.362" y2="1.803" width="0.1524" layer="21"/>
+<wire x1="2.362" y1="-1.803" x2="2.362" y2="1.803" width="0.1524" layer="51"/>
 <wire x1="2.362" y1="1.803" x2="-2.362" y2="1.803" width="0.1524" layer="51"/>
-<wire x1="-2.362" y1="1.803" x2="-2.362" y2="-1.803" width="0.1524" layer="21"/>
+<wire x1="-2.362" y1="1.803" x2="-2.362" y2="-1.803" width="0.1524" layer="51"/>
 <circle x="-1.8034" y="-0.9906" radius="0.1436" width="0.2032" layer="21"/>
 <smd name="1" x="-1.905" y="-2.6162" dx="0.6096" dy="2.2098" layer="1"/>
 <smd name="2" x="-0.635" y="-2.6162" dx="0.6096" dy="2.2098" layer="1"/>
@@ -13134,6 +13134,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <rectangle x1="-0.8128" y1="1.8542" x2="-0.4572" y2="2.8702" layer="51"/>
 <rectangle x1="0.4572" y1="1.8542" x2="0.8128" y2="2.8702" layer="51"/>
 <rectangle x1="1.7272" y1="1.8542" x2="2.0828" y2="2.8702" layer="51"/>
+<wire x1="-2.54" y1="1.905" x2="-2.54" y2="-1.905" width="0.1524" layer="21"/>
+<wire x1="2.54" y1="1.905" x2="2.54" y2="-1.905" width="0.1524" layer="21"/>
 </package>
 <package name="SO08-TIGHT">
 <wire x1="2.159" y1="1.9558" x2="-2.159" y2="1.9558" width="0.2032" layer="21"/>
@@ -13240,12 +13242,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <packages>
 <package name="TQFP32-08">
 <description>&lt;B&gt;Thin Plasic Quad Flat Package&lt;/B&gt; Grid 0.8 mm</description>
-<wire x1="3.505" y1="3.505" x2="3.505" y2="-3.505" width="0.1524" layer="21"/>
-<wire x1="3.505" y1="-3.505" x2="-3.505" y2="-3.505" width="0.1524" layer="21"/>
-<wire x1="-3.505" y1="-3.505" x2="-3.505" y2="3.15" width="0.1524" layer="21"/>
-<wire x1="-3.15" y1="3.505" x2="3.505" y2="3.505" width="0.1524" layer="21"/>
-<wire x1="-3.15" y1="3.505" x2="-3.505" y2="3.15" width="0.1524" layer="21"/>
-<circle x="-2.7432" y="2.7432" radius="0.3592" width="0.1524" layer="21"/>
+<wire x1="3.505" y1="3.505" x2="3.505" y2="-3.505" width="0.1524" layer="51"/>
+<wire x1="3.505" y1="-3.505" x2="-3.505" y2="-3.505" width="0.1524" layer="51"/>
+<wire x1="-3.505" y1="-3.505" x2="-3.505" y2="3.15" width="0.1524" layer="51"/>
+<wire x1="-3.15" y1="3.505" x2="3.505" y2="3.505" width="0.1524" layer="51"/>
+<wire x1="-3.15" y1="3.505" x2="-3.505" y2="3.15" width="0.1524" layer="51"/>
+<circle x="-2.7432" y="2.7432" radius="0.254" width="0.1524" layer="21"/>
 <smd name="1" x="-4.2926" y="2.8" dx="1.27" dy="0.5588" layer="1"/>
 <smd name="2" x="-4.2926" y="2" dx="1.27" dy="0.5588" layer="1"/>
 <smd name="3" x="-4.2926" y="1.2" dx="1.27" dy="0.5588" layer="1"/>
@@ -13312,6 +13314,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <rectangle x1="-1.4286" y1="3.556" x2="-0.9714" y2="4.5466" layer="51"/>
 <rectangle x1="-2.2286" y1="3.556" x2="-1.7714" y2="4.5466" layer="51"/>
 <rectangle x1="-3.0286" y1="3.556" x2="-2.5714" y2="4.5466" layer="51"/>
+<wire x1="3.302" y1="3.302" x2="3.302" y2="-3.302" width="0.1524" layer="21"/>
+<wire x1="3.302" y1="-3.302" x2="-3.302" y2="-3.302" width="0.1524" layer="21"/>
+<wire x1="-3.302" y1="-3.302" x2="-3.302" y2="3.048" width="0.1524" layer="21"/>
+<wire x1="-3.302" y1="3.048" x2="-3.048" y2="3.302" width="0.1524" layer="21"/>
+<wire x1="-3.048" y1="3.302" x2="3.302" y2="3.302" width="0.1524" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -15477,13 +15484,14 @@ Source: MC-306_405_406_E07X.PDF</description>
 <wire x1="-3.9" y1="-1.5" x2="-3.9" y2="1.5" width="0.2032" layer="21"/>
 <wire x1="-1.4" y1="1.5" x2="1.4" y2="1.5" width="0.2032" layer="21"/>
 <wire x1="1.4" y1="-1.5" x2="-1.4" y2="-1.5" width="0.2032" layer="21"/>
-<wire x1="-3.8" y1="0.5" x2="-3.8" y2="-0.5" width="0.2032" layer="21" curve="-180"/>
+<wire x1="-3.8" y1="0.246" x2="-3.8" y2="-0.246" width="0.2032" layer="21" curve="-180"/>
 <smd name="1" x="-2.75" y="-1.6" dx="1.3" dy="1.9" layer="1"/>
 <smd name="2" x="2.75" y="-1.6" dx="1.3" dy="1.9" layer="1"/>
 <smd name="3" x="2.75" y="1.6" dx="1.3" dy="1.9" layer="1" rot="R180"/>
 <smd name="4" x="-2.75" y="1.6" dx="1.3" dy="1.9" layer="1" rot="R180"/>
 <text x="-4.0192" y="2.815" size="1.27" layer="25">&gt;NAME</text>
 <text x="-4.0192" y="-4.593" size="1.27" layer="27">&gt;VALUE</text>
+<wire x1="-3.048" y1="0" x2="-2.032" y2="0" width="0.254" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -15505,7 +15513,7 @@ Source: MC-306_405_406_E07X.PDF</description>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="MC-306" prefix="Q">
+<deviceset name="MC-306" prefix="Y">
 <description>&lt;b&gt;kHz RANGE CRYSTAL UNIT&lt;/b&gt; SMD&lt;p&gt;
 Source: MC-306_405_406_E07X.PDF &lt;a href="http://www.epsontoyocom.co.jp"&gt; Homepage &lt;/a&gt;</description>
 <gates>
@@ -16114,12 +16122,12 @@ PNP complement: PMBT3906.&lt;/h&gt;</description>
 <library name="Seeed-IC-2016">
 <packages>
 <package name="TSSOP20-0.65-6.5X4.4MM">
-<wire x1="-3.25" y1="2.2" x2="3.25" y2="2.2" width="0.127" layer="21"/>
-<wire x1="3.25" y1="2.2" x2="3.25" y2="-2.2" width="0.127" layer="21"/>
-<wire x1="3.25" y1="-2.2" x2="-2.945615625" y2="-2.2" width="0.127" layer="21"/>
-<wire x1="-2.945615625" y1="-2.2" x2="-3.25" y2="-1.895615625" width="0.127" layer="21"/>
-<wire x1="-3.25" y1="-1.895615625" x2="-3.25" y2="2.2" width="0.127" layer="21"/>
-<circle x="-3.81" y="-2.54" radius="0.381" width="0" layer="21"/>
+<wire x1="-3.25" y1="2.2" x2="3.25" y2="2.2" width="0.127" layer="51"/>
+<wire x1="3.25" y1="2.2" x2="3.25" y2="-2.2" width="0.127" layer="51"/>
+<wire x1="3.25" y1="-2.2" x2="-2.945615625" y2="-2.2" width="0.127" layer="51"/>
+<wire x1="-2.945615625" y1="-2.2" x2="-3.25" y2="-1.895615625" width="0.127" layer="51"/>
+<wire x1="-3.25" y1="-1.895615625" x2="-3.25" y2="2.2" width="0.127" layer="51"/>
+<circle x="-2.54" y="-1.27" radius="0.381" width="0" layer="21"/>
 <smd name="1" x="-2.925" y="-3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
 <smd name="2" x="-2.275" y="-3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
 <smd name="3" x="-1.625" y="-3.065" dx="1.5" dy="0.35" layer="1" rot="R90"/>
@@ -16143,6 +16151,8 @@ PNP complement: PMBT3906.&lt;/h&gt;</description>
 <text x="-2.54" y="4.445" size="0.889" layer="25" ratio="11">&gt;NAME</text>
 <text x="-2.54" y="-0.635" size="0.889" layer="27" ratio="11">&gt;VALUE</text>
 <rectangle x1="-3.25" y1="-2.275" x2="3.25" y2="2.275" layer="39"/>
+<wire x1="-3.429" y1="2.159" x2="-3.429" y2="-2.159" width="0.1524" layer="21"/>
+<wire x1="3.429" y1="-2.159" x2="3.429" y2="2.159" width="0.1524" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -16265,9 +16275,9 @@ The author cannot warrant that this library is free from error
 or will meet your specific requirements.&lt;p&gt;
 &lt;author&gt;Created by PuceBaboon.com. Komagane, Nagano, JAPAN&lt;/author&gt;
 </description>
-<wire x1="16.2" y1="0" x2="16.2" y2="24.1" width="0.127" layer="21"/>
-<wire x1="16.2" y1="24.1" x2="0" y2="24.1" width="0.127" layer="21"/>
-<wire x1="0" y1="24.1" x2="0" y2="0" width="0.127" layer="21"/>
+<wire x1="16.2" y1="0" x2="16.2" y2="24.1" width="0.127" layer="51"/>
+<wire x1="16.2" y1="24.1" x2="0" y2="24.1" width="0.127" layer="51"/>
+<wire x1="0" y1="24.1" x2="0" y2="0" width="0.127" layer="51"/>
 <smd name="8" x="0" y="2" dx="2" dy="1.2" layer="1"/>
 <smd name="7" x="0" y="4" dx="2" dy="1.2" layer="1"/>
 <smd name="6" x="0" y="6" dx="2" dy="1.2" layer="1"/>
@@ -16305,10 +16315,17 @@ or will meet your specific requirements.&lt;p&gt;
 <smd name="17" x="11" y="0" dx="2" dy="1.2" layer="1" rot="R90"/>
 <smd name="18" x="3" y="0" dx="2" dy="1.2" layer="1" rot="R90"/>
 <smd name="19" x="5" y="0" dx="2" dy="1.2" layer="1" rot="R90"/>
-<wire x1="0" y1="0" x2="16.2" y2="0" width="0.127" layer="21"/>
+<wire x1="0" y1="0" x2="16.2" y2="0" width="0.127" layer="51"/>
 <smd name="20" x="13" y="0" dx="2" dy="1.2" layer="1" rot="R90"/>
 <smd name="21" x="7" y="0" dx="2" dy="1.2" layer="1" rot="R90"/>
 <smd name="22" x="9" y="0" dx="2" dy="1.2" layer="1" rot="R90"/>
+<wire x1="0" y1="16.9926" x2="0" y2="24.1046" width="0.254" layer="21"/>
+<wire x1="0" y1="24.1046" x2="16.2052" y2="24.1046" width="0.254" layer="21"/>
+<wire x1="16.2052" y1="24.1046" x2="16.2052" y2="16.9926" width="0.254" layer="21"/>
+<wire x1="0" y1="1.016" x2="0" y2="0" width="0.254" layer="21"/>
+<wire x1="0" y1="0" x2="2.0066" y2="0" width="0.254" layer="21"/>
+<wire x1="16.2052" y1="1.016" x2="16.2052" y2="0" width="0.254" layer="21"/>
+<wire x1="16.2052" y1="0" x2="13.9954" y2="0" width="0.254" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -16397,10 +16414,10 @@ or will meet your specific requirements.&lt;p&gt;
 <library name="pimoroni-mechanical">
 <packages>
 <package name="RELAY-EE2">
-<wire x1="-7.5" y1="3.75" x2="7.5" y2="3.75" width="0.127" layer="21"/>
-<wire x1="7.5" y1="3.75" x2="7.5" y2="-3.75" width="0.127" layer="21"/>
-<wire x1="7.5" y1="-3.75" x2="-7.5" y2="-3.75" width="0.127" layer="21"/>
-<wire x1="-7.5" y1="-3.75" x2="-7.5" y2="3.75" width="0.127" layer="21"/>
+<wire x1="-7.5" y1="3.75" x2="7.5" y2="3.75" width="0.127" layer="48"/>
+<wire x1="7.5" y1="3.75" x2="7.5" y2="-3.75" width="0.127" layer="48"/>
+<wire x1="7.5" y1="-3.75" x2="-7.5" y2="-3.75" width="0.127" layer="48"/>
+<wire x1="-7.5" y1="-3.75" x2="-7.5" y2="3.75" width="0.127" layer="48"/>
 <smd name="1" x="-6.45" y="-3.645" dx="1.11" dy="3" layer="1"/>
 <smd name="3" x="-1.37" y="-3.645" dx="1.11" dy="3" layer="1"/>
 <smd name="4" x="1.17" y="-3.645" dx="1.11" dy="3" layer="1"/>
@@ -16411,6 +16428,12 @@ or will meet your specific requirements.&lt;p&gt;
 <smd name="8" x="3.71" y="3.645" dx="1.11" dy="3" layer="1"/>
 <text x="-6.5" y="0.5" size="1.27" layer="25">&gt;NAME</text>
 <text x="-6.5" y="-1.5" size="1.27" layer="27">&gt;VALUE</text>
+<wire x1="-7.62" y1="3.81" x2="-7.62" y2="-3.81" width="0.254" layer="21"/>
+<wire x1="-5.08" y1="3.81" x2="-2.54" y2="3.81" width="0.254" layer="21"/>
+<wire x1="5.08" y1="3.81" x2="7.62" y2="3.81" width="0.254" layer="21"/>
+<wire x1="7.62" y1="3.81" x2="7.62" y2="-3.81" width="0.254" layer="21"/>
+<wire x1="7.62" y1="-3.81" x2="5.08" y2="-3.81" width="0.254" layer="21"/>
+<wire x1="-5.08" y1="-3.81" x2="-2.54" y2="-3.81" width="0.254" layer="21"/>
 </package>
 </packages>
 <symbols>
@@ -16874,14 +16897,14 @@ RFID</text>
 <package name="BHSD-1225-SM">
 <smd name="V+" x="-10.415" y="0" dx="2.54" dy="3.81" layer="1"/>
 <smd name="V-" x="10.415" y="0" dx="2.54" dy="3.81" layer="1"/>
-<wire x1="9.145" y1="7.365" x2="9.145" y2="-7.365" width="0.127" layer="19"/>
-<wire x1="9.145" y1="-7.365" x2="-9.145" y2="-7.365" width="0.127" layer="19"/>
-<wire x1="-9.145" y1="-7.365" x2="-9.145" y2="7.365" width="0.127" layer="19"/>
-<wire x1="-9.145" y1="7.365" x2="-2.545" y2="7.365" width="0.127" layer="19"/>
-<wire x1="-2.545" y1="7.365" x2="-2.545" y2="5.155" width="0.127" layer="19"/>
-<wire x1="-2.545" y1="5.155" x2="2.545" y2="5.155" width="0.127" layer="19"/>
-<wire x1="2.545" y1="5.155" x2="2.545" y2="7.365" width="0.127" layer="19"/>
-<wire x1="2.545" y1="7.365" x2="9.145" y2="7.365" width="0.127" layer="19"/>
+<wire x1="9.145" y1="7.365" x2="9.145" y2="-7.365" width="0.127" layer="51"/>
+<wire x1="9.145" y1="-7.365" x2="-9.145" y2="-7.365" width="0.127" layer="51"/>
+<wire x1="-9.145" y1="-7.365" x2="-9.145" y2="7.365" width="0.127" layer="51"/>
+<wire x1="-9.145" y1="7.365" x2="-2.545" y2="7.365" width="0.127" layer="51"/>
+<wire x1="-2.545" y1="7.365" x2="-2.545" y2="5.155" width="0.127" layer="51"/>
+<wire x1="-2.545" y1="5.155" x2="2.545" y2="5.155" width="0.127" layer="51"/>
+<wire x1="2.545" y1="5.155" x2="2.545" y2="7.365" width="0.127" layer="51"/>
+<wire x1="2.545" y1="7.365" x2="9.145" y2="7.365" width="0.127" layer="51"/>
 <wire x1="-9.4" y1="2.4" x2="-9.4" y2="7.6" width="0.254" layer="21"/>
 <wire x1="-9.4" y1="7.6" x2="-2.3" y2="7.6" width="0.254" layer="21"/>
 <wire x1="-2.3" y1="7.6" x2="-2.3" y2="5.4" width="0.254" layer="21"/>
@@ -16892,9 +16915,11 @@ RFID</text>
 <wire x1="-9.4" y1="-2.4" x2="-9.4" y2="-7.6" width="0.254" layer="21"/>
 <wire x1="-9.4" y1="-7.6" x2="9.4" y2="-7.6" width="0.254" layer="21"/>
 <wire x1="9.4" y1="-7.6" x2="9.4" y2="-2.4" width="0.254" layer="21"/>
-<text x="-7" y="0" size="1.27" layer="48" align="center">+</text>
-<text x="7" y="0" size="1.27" layer="48" align="center">-</text>
-<circle x="0" y="0" radius="6.25" width="0.254" layer="48"/>
+<text x="-7" y="0" size="1.27" layer="51" align="center">+</text>
+<text x="7" y="0" size="1.27" layer="51" align="center">-</text>
+<circle x="0" y="0" radius="6.25" width="0.254" layer="51"/>
+<text x="-8.89" y="-9.525" size="1.27" layer="27">&gt;Value</text>
+<text x="3.81" y="-9.525" size="1.27" layer="25">&gt;Name</text>
 </package>
 </packages>
 <symbols>
@@ -17268,8 +17293,8 @@ Tyco Electronics</description>
 <wire x1="1.4" y1="0.8" x2="1.4" y2="-0.8" width="0.127" layer="51"/>
 <wire x1="1.4" y1="-0.8" x2="-1.4" y2="-0.8" width="0.127" layer="51"/>
 <wire x1="-1.4" y1="-0.8" x2="-1.4" y2="0.8" width="0.127" layer="51"/>
-<wire x1="-1.6" y1="0.8" x2="-1.6" y2="-0.8" width="0.22" layer="21"/>
-<wire x1="1.6" y1="0.8" x2="1.6" y2="-0.8" width="0.22" layer="21"/>
+<wire x1="-1.727" y1="0.8" x2="-1.727" y2="-0.8" width="0.22" layer="21"/>
+<wire x1="1.727" y1="0.8" x2="1.727" y2="-0.8" width="0.22" layer="21"/>
 <smd name="1" x="-1" y="0" dx="2" dy="0.7" layer="1" rot="R90"/>
 <smd name="2" x="0" y="0" dx="2" dy="0.7" layer="1" rot="R90"/>
 <smd name="3" x="1" y="0" dx="2" dy="0.7" layer="1" rot="R90"/>
@@ -17302,11 +17327,11 @@ Tyco Electronics</description>
 <wire x1="-5.08" y1="0" x2="-5.08" y2="-2.54" width="0.1524" layer="94"/>
 <wire x1="-5.08" y1="-2.54" x2="-3.048" y2="-2.54" width="0.1524" layer="94"/>
 <wire x1="-5.08" y1="0" x2="-7.62" y2="0" width="0.1524" layer="94"/>
-<text x="-5.08" y="4.572" size="1.778" layer="95">&gt;NAME</text>
-<text x="-5.08" y="-5.588" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="1" x="0" y="2.54" visible="off" length="point" direction="pas" rot="R180"/>
 <pin name="2" x="-7.62" y="0" visible="off" length="point" direction="pas"/>
 <pin name="3" x="0" y="-2.54" visible="off" length="point" direction="pas" rot="R180"/>
+<text x="-5.08" y="4.572" size="1.778" layer="95">&gt;NAME</text>
+<text x="-5.08" y="-5.588" size="1.778" layer="96">&gt;VALUE</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -17508,8 +17533,8 @@ Tyco Electronics</description>
 <part name="C9" library="rcl" deviceset="C-US" device="C0805" value="1uF"/>
 <part name="R1" library="rcl" deviceset="R-US_" device="R0805" value="NO(10k)"/>
 <part name="R10" library="rcl" deviceset="R-US_" device="R0805" value="0"/>
-<part name="JP1" library="SparkFun-Connectors" deviceset="M03X2" device="FEMALE" value="FEMALE 2x3"/>
-<part name="JP2" library="SparkFun-Connectors" deviceset="M06X2" device="PTH_FEMALE" value="2X6 FEMALE"/>
+<part name="J6" library="SparkFun-Connectors" deviceset="M03X2" device="FEMALE" value="FEMALE 2x3"/>
+<part name="J7" library="SparkFun-Connectors" deviceset="M06X2" device="PTH_FEMALE" value="2X6 FEMALE"/>
 <part name="GND22" library="supply1" deviceset="GND" device=""/>
 <part name="P+8" library="supply1" deviceset="+5V" device=""/>
 <part name="+3V37" library="supply1" deviceset="+3V3" device=""/>
@@ -17518,7 +17543,7 @@ Tyco Electronics</description>
 <part name="J2" library="con-usb" deviceset="1981584-1" device=""/>
 <part name="GND17" library="supply1" deviceset="GND" device=""/>
 <part name="Y1" library="SmartPrj" deviceset="RESONATOR" device="MU" value="CSTCE16M0V53-R0 16MHZ"/>
-<part name="Q3" library="crystal" deviceset="MC-306" device=""/>
+<part name="Y2" library="crystal" deviceset="MC-306" device=""/>
 <part name="C14" library="rcl" deviceset="CPOL-US" device="UD-10X10" value="1200uF"/>
 <part name="C13" library="rcl" deviceset="C-US" device="C1206" value="100uF"/>
 <part name="C15" library="rcl" deviceset="CPOL-US" device="UD-10X10" value="1200uF"/>
@@ -17572,7 +17597,7 @@ Tyco Electronics</description>
 <instance part="GND19" gate="1" x="365.76" y="104.14"/>
 <instance part="U2" gate="G$1" x="193.04" y="20.32" smashed="yes" rot="MR0">
 <attribute name="NAME" x="201.93" y="34.29" size="1.27" layer="95" ratio="10" rot="MR0"/>
-<attribute name="VALUE" x="214.63" y="3.81" size="1.27" layer="96" ratio="10" rot="MR0"/>
+<attribute name="VALUE" x="217.17" y="3.81" size="1.27" layer="96" ratio="10" rot="MR0"/>
 </instance>
 <instance part="P+4" gate="1" x="190.5" y="60.96" rot="MR0"/>
 <instance part="+3V34" gate="G$1" x="198.12" y="60.96" rot="MR0"/>
@@ -17631,8 +17656,8 @@ Tyco Electronics</description>
 <instance part="C9" gate="G$1" x="152.4" y="185.42"/>
 <instance part="R1" gate="G$1" x="50.8" y="91.44" rot="R180"/>
 <instance part="R10" gate="G$1" x="170.18" y="5.08" rot="R180"/>
-<instance part="JP1" gate="G$1" x="330.2" y="43.18"/>
-<instance part="JP2" gate="G$1" x="419.1" y="17.78"/>
+<instance part="J6" gate="G$1" x="330.2" y="43.18"/>
+<instance part="J7" gate="G$1" x="419.1" y="17.78"/>
 <instance part="GND22" gate="1" x="408.94" y="5.08"/>
 <instance part="P+8" gate="1" x="391.16" y="33.02"/>
 <instance part="+3V37" gate="G$1" x="398.78" y="33.02"/>
@@ -17643,7 +17668,7 @@ Tyco Electronics</description>
 <instance part="Y1" gate="G$1" x="60.96" y="53.34" smashed="yes" rot="R90">
 <attribute name="VALUE" x="55.88" y="27.94" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="Q3" gate="P" x="386.08" y="162.56" rot="R90"/>
+<instance part="Y2" gate="P" x="386.08" y="162.56" rot="R90"/>
 <instance part="C14" gate="G$1" x="236.22" y="88.9"/>
 <instance part="C13" gate="G$1" x="228.6" y="88.9" rot="MR0"/>
 <instance part="C15" gate="G$1" x="246.38" y="88.9"/>
@@ -17911,7 +17936,7 @@ Tyco Electronics</description>
 <wire x1="441.96" y1="88.9" x2="441.96" y2="83.82" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="JP2" gate="G$1" pin="11"/>
+<pinref part="J7" gate="G$1" pin="11"/>
 <wire x1="414.02" y1="17.78" x2="408.94" y2="17.78" width="0.1524" layer="91"/>
 <pinref part="GND22" gate="1" pin="GND"/>
 <wire x1="408.94" y1="7.62" x2="408.94" y2="10.16" width="0.1524" layer="91"/>
@@ -17919,7 +17944,7 @@ Tyco Electronics</description>
 <wire x1="444.5" y1="10.16" x2="408.94" y2="10.16" width="0.1524" layer="91"/>
 <junction x="408.94" y="10.16"/>
 <wire x1="444.5" y1="10.16" x2="444.5" y2="30.48" width="0.1524" layer="91"/>
-<pinref part="JP2" gate="G$1" pin="2"/>
+<pinref part="J7" gate="G$1" pin="2"/>
 <wire x1="444.5" y1="30.48" x2="429.26" y2="30.48" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -17929,7 +17954,7 @@ Tyco Electronics</description>
 <pinref part="J4" gate="G$1" pin="1"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="G$1" pin="6"/>
+<pinref part="J6" gate="G$1" pin="6"/>
 <pinref part="GND17" gate="1" pin="GND"/>
 <wire x1="337.82" y1="40.64" x2="342.9" y2="40.64" width="0.1524" layer="91"/>
 <wire x1="342.9" y1="40.64" x2="342.9" y2="35.56" width="0.1524" layer="91"/>
@@ -18068,7 +18093,7 @@ Tyco Electronics</description>
 <pinref part="J4" gate="G$1" pin="3"/>
 </segment>
 <segment>
-<pinref part="JP2" gate="G$1" pin="9"/>
+<pinref part="J7" gate="G$1" pin="9"/>
 <pinref part="P+8" gate="1" pin="+5V"/>
 <wire x1="414.02" y1="20.32" x2="391.16" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="391.16" y1="20.32" x2="391.16" y2="30.48" width="0.1524" layer="91"/>
@@ -18106,7 +18131,7 @@ Tyco Electronics</description>
 <label x="464.82" y="152.4" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="JP2" gate="G$1" pin="8"/>
+<pinref part="J7" gate="G$1" pin="8"/>
 <wire x1="429.26" y1="22.86" x2="434.34" y2="22.86" width="0.1524" layer="91"/>
 <label x="434.34" y="22.86" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -18127,7 +18152,7 @@ Tyco Electronics</description>
 <label x="464.82" y="157.48" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="JP2" gate="G$1" pin="10"/>
+<pinref part="J7" gate="G$1" pin="10"/>
 <wire x1="429.26" y1="20.32" x2="434.34" y2="20.32" width="0.1524" layer="91"/>
 <label x="434.34" y="20.32" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -18261,14 +18286,14 @@ Tyco Electronics</description>
 <wire x1="391.16" y1="165.1" x2="391.16" y2="162.56" width="0.1524" layer="91"/>
 <pinref part="U4" gate="G$1" pin="X1"/>
 <wire x1="391.16" y1="162.56" x2="393.7" y2="162.56" width="0.1524" layer="91"/>
-<pinref part="Q3" gate="P" pin="2"/>
+<pinref part="Y2" gate="P" pin="2"/>
 </segment>
 </net>
 <net name="N$3" class="0">
 <segment>
 <pinref part="U4" gate="G$1" pin="X2"/>
 <wire x1="386.08" y1="160.02" x2="393.7" y2="160.02" width="0.1524" layer="91"/>
-<pinref part="Q3" gate="P" pin="1"/>
+<pinref part="Y2" gate="P" pin="1"/>
 </segment>
 </net>
 <net name="N$6" class="0">
@@ -18436,7 +18461,7 @@ Tyco Electronics</description>
 <segment>
 <pinref part="+3V37" gate="G$1" pin="+3V3"/>
 <wire x1="398.78" y1="30.48" x2="398.78" y2="22.86" width="0.1524" layer="91"/>
-<pinref part="JP2" gate="G$1" pin="7"/>
+<pinref part="J7" gate="G$1" pin="7"/>
 <wire x1="398.78" y1="22.86" x2="414.02" y2="22.86" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -18471,7 +18496,7 @@ Tyco Electronics</description>
 <junction x="127" y="157.48"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="G$1" pin="4"/>
+<pinref part="J6" gate="G$1" pin="4"/>
 <wire x1="337.82" y1="43.18" x2="342.9" y2="43.18" width="0.1524" layer="91"/>
 <label x="342.9" y="43.18" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -18502,7 +18527,7 @@ Tyco Electronics</description>
 <label x="48.26" y="167.64" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="G$1" pin="5"/>
+<pinref part="J6" gate="G$1" pin="5"/>
 <wire x1="322.58" y1="40.64" x2="317.5" y2="40.64" width="0.1524" layer="91"/>
 <label x="317.5" y="40.64" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -18527,7 +18552,7 @@ Tyco Electronics</description>
 <wire x1="205.74" y1="17.78" x2="208.28" y2="17.78" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="G$1" pin="1"/>
+<pinref part="J6" gate="G$1" pin="1"/>
 <wire x1="322.58" y1="45.72" x2="317.5" y2="45.72" width="0.1524" layer="91"/>
 <label x="317.5" y="45.72" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -18544,7 +18569,7 @@ Tyco Electronics</description>
 <wire x1="205.74" y1="15.24" x2="208.28" y2="15.24" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="G$1" pin="2"/>
+<pinref part="J6" gate="G$1" pin="2"/>
 <wire x1="337.82" y1="45.72" x2="342.9" y2="45.72" width="0.1524" layer="91"/>
 <label x="342.9" y="45.72" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -18560,7 +18585,7 @@ Tyco Electronics</description>
 <label x="231.14" y="30.48" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="G$1" pin="3"/>
+<pinref part="J6" gate="G$1" pin="3"/>
 <wire x1="322.58" y1="43.18" x2="317.5" y2="43.18" width="0.1524" layer="91"/>
 <label x="317.5" y="43.18" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -18769,7 +18794,7 @@ Tyco Electronics</description>
 <label x="127" y="76.2" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="JP2" gate="G$1" pin="3"/>
+<pinref part="J7" gate="G$1" pin="3"/>
 <wire x1="414.02" y1="27.94" x2="408.94" y2="27.94" width="0.1524" layer="91"/>
 <label x="408.94" y="27.94" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -18781,7 +18806,7 @@ Tyco Electronics</description>
 <label x="127" y="73.66" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="JP2" gate="G$1" pin="5"/>
+<pinref part="J7" gate="G$1" pin="5"/>
 <wire x1="414.02" y1="25.4" x2="408.94" y2="25.4" width="0.1524" layer="91"/>
 <label x="408.94" y="25.4" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -18793,7 +18818,7 @@ Tyco Electronics</description>
 <label x="121.92" y="60.96" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="JP2" gate="G$1" pin="1"/>
+<pinref part="J7" gate="G$1" pin="1"/>
 <wire x1="414.02" y1="30.48" x2="408.94" y2="30.48" width="0.1524" layer="91"/>
 <label x="408.94" y="30.48" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -18805,7 +18830,7 @@ Tyco Electronics</description>
 <label x="121.92" y="58.42" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="JP2" gate="G$1" pin="12"/>
+<pinref part="J7" gate="G$1" pin="12"/>
 <wire x1="429.26" y1="17.78" x2="434.34" y2="17.78" width="0.1524" layer="91"/>
 <label x="434.34" y="17.78" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -18817,7 +18842,7 @@ Tyco Electronics</description>
 <label x="121.92" y="55.88" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="JP2" gate="G$1" pin="4"/>
+<pinref part="J7" gate="G$1" pin="4"/>
 <wire x1="429.26" y1="27.94" x2="434.34" y2="27.94" width="0.1524" layer="91"/>
 <label x="434.34" y="27.94" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -18829,7 +18854,7 @@ Tyco Electronics</description>
 <label x="121.92" y="40.64" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="JP2" gate="G$1" pin="6"/>
+<pinref part="J7" gate="G$1" pin="6"/>
 <wire x1="429.26" y1="25.4" x2="434.34" y2="25.4" width="0.1524" layer="91"/>
 <label x="434.34" y="25.4" size="1.27" layer="95" xref="yes"/>
 </segment>

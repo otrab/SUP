@@ -58,7 +58,7 @@
 <layer number="48" name="Document" color="14" fill="1" visible="yes" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
-<layer number="51" name="tDocu" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="51" name="tDocu" color="13" fill="1" visible="yes" active="yes"/>
 <layer number="52" name="bDocu" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="53" name="tGND_GNDA" color="7" fill="9" visible="no" active="no"/>
 <layer number="54" name="bGND_GNDA" color="1" fill="9" visible="no" active="no"/>
@@ -754,14 +754,14 @@ RFID</text>
 <package name="BHSD-1225-SM">
 <smd name="V+" x="-10.415" y="0" dx="2.54" dy="3.81" layer="1"/>
 <smd name="V-" x="10.415" y="0" dx="2.54" dy="3.81" layer="1"/>
-<wire x1="9.145" y1="7.365" x2="9.145" y2="-7.365" width="0.127" layer="19"/>
-<wire x1="9.145" y1="-7.365" x2="-9.145" y2="-7.365" width="0.127" layer="19"/>
-<wire x1="-9.145" y1="-7.365" x2="-9.145" y2="7.365" width="0.127" layer="19"/>
-<wire x1="-9.145" y1="7.365" x2="-2.545" y2="7.365" width="0.127" layer="19"/>
-<wire x1="-2.545" y1="7.365" x2="-2.545" y2="5.155" width="0.127" layer="19"/>
-<wire x1="-2.545" y1="5.155" x2="2.545" y2="5.155" width="0.127" layer="19"/>
-<wire x1="2.545" y1="5.155" x2="2.545" y2="7.365" width="0.127" layer="19"/>
-<wire x1="2.545" y1="7.365" x2="9.145" y2="7.365" width="0.127" layer="19"/>
+<wire x1="9.145" y1="7.365" x2="9.145" y2="-7.365" width="0.127" layer="51"/>
+<wire x1="9.145" y1="-7.365" x2="-9.145" y2="-7.365" width="0.127" layer="51"/>
+<wire x1="-9.145" y1="-7.365" x2="-9.145" y2="7.365" width="0.127" layer="51"/>
+<wire x1="-9.145" y1="7.365" x2="-2.545" y2="7.365" width="0.127" layer="51"/>
+<wire x1="-2.545" y1="7.365" x2="-2.545" y2="5.155" width="0.127" layer="51"/>
+<wire x1="-2.545" y1="5.155" x2="2.545" y2="5.155" width="0.127" layer="51"/>
+<wire x1="2.545" y1="5.155" x2="2.545" y2="7.365" width="0.127" layer="51"/>
+<wire x1="2.545" y1="7.365" x2="9.145" y2="7.365" width="0.127" layer="51"/>
 <wire x1="-9.4" y1="2.4" x2="-9.4" y2="7.6" width="0.254" layer="21"/>
 <wire x1="-9.4" y1="7.6" x2="-2.3" y2="7.6" width="0.254" layer="21"/>
 <wire x1="-2.3" y1="7.6" x2="-2.3" y2="5.4" width="0.254" layer="21"/>
@@ -772,9 +772,11 @@ RFID</text>
 <wire x1="-9.4" y1="-2.4" x2="-9.4" y2="-7.6" width="0.254" layer="21"/>
 <wire x1="-9.4" y1="-7.6" x2="9.4" y2="-7.6" width="0.254" layer="21"/>
 <wire x1="9.4" y1="-7.6" x2="9.4" y2="-2.4" width="0.254" layer="21"/>
-<text x="-7" y="0" size="1.27" layer="48" align="center">+</text>
-<text x="7" y="0" size="1.27" layer="48" align="center">-</text>
-<circle x="0" y="0" radius="6.25" width="0.254" layer="48"/>
+<text x="-7" y="0" size="1.27" layer="51" align="center">+</text>
+<text x="7" y="0" size="1.27" layer="51" align="center">-</text>
+<circle x="0" y="0" radius="6.25" width="0.254" layer="51"/>
+<text x="-8.89" y="-9.525" size="1.27" layer="27">&gt;Value</text>
+<text x="3.81" y="-9.525" size="1.27" layer="25">&gt;Name</text>
 </package>
 </packages>
 <symbols>
