@@ -16868,7 +16868,7 @@ or will meet your specific requirements.&lt;p&gt;
 <wire x1="-20.32" y1="58.42" x2="20.32" y2="58.42" width="0.254" layer="51"/>
 <wire x1="20.32" y1="58.42" x2="20.32" y2="-2.54" width="0.254" layer="51"/>
 <wire x1="20.32" y1="-2.54" x2="-20.32" y2="-2.54" width="0.254" layer="51"/>
-<text x="0" y="40.64" size="5.08" layer="51" ratio="10" align="center">ANTENA
+<text x="0" y="40.64" size="1.778" layer="51" font="vector" ratio="1" align="center">ANTENA
 RFID</text>
 </package>
 <package name="BHSD-1225-SM">
