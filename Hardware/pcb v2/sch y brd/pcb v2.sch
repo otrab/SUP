@@ -17480,7 +17480,7 @@ Tyco Electronics</description>
 <part name="GND20" library="supply1" deviceset="GND" device=""/>
 <part name="Q2" library="diego" deviceset="PMBT3904" device=""/>
 <part name="R12" library="rcl" deviceset="R-US_" device="R0805" value="1k"/>
-<part name="R13" library="rcl" deviceset="R-US_" device="R0805" value="1K"/>
+<part name="R13" library="rcl" deviceset="R-US_" device="R0805" value="1k"/>
 <part name="P+7" library="supply1" deviceset="+5V" device=""/>
 <part name="C17" library="rcl" deviceset="C-US" device="C0805" value="1uF"/>
 <part name="GND19" library="supply1" deviceset="GND" device=""/>
@@ -17527,7 +17527,7 @@ Tyco Electronics</description>
 <part name="R8" library="rcl" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="S1" library="SparkFun-Electromechanical" deviceset="SWITCH-MOMENTARY-2" device="SMD"/>
 <part name="GND24" library="supply1" deviceset="GND" device=""/>
-<part name="R15" library="rcl" deviceset="R-US_" device="R0805" value="10k"/>
+<part name="R15" library="rcl" deviceset="R-US_" device="R0603" value="10k"/>
 <part name="P+10" library="supply1" deviceset="+5V" device=""/>
 <part name="C8" library="rcl" deviceset="C-US" device="C0805" value="10uF"/>
 <part name="C9" library="rcl" deviceset="C-US" device="C0805" value="1uF"/>
@@ -17545,7 +17545,7 @@ Tyco Electronics</description>
 <part name="Y1" library="SmartPrj" deviceset="RESONATOR" device="MU" value="CSTCE16M0V53-R0 16MHZ"/>
 <part name="Y2" library="crystal" deviceset="MC-306" device=""/>
 <part name="C14" library="rcl" deviceset="CPOL-US" device="UD-10X10" value="1200uF"/>
-<part name="C13" library="rcl" deviceset="C-US" device="C1206" value="100uF"/>
+<part name="C13" library="rcl" deviceset="C-US" device="C0805" value="10uF"/>
 <part name="C15" library="rcl" deviceset="CPOL-US" device="UD-10X10" value="1200uF"/>
 <part name="C16" library="rcl" deviceset="CPOL-US" device="UD-5X5,8" value="10uF"/>
 <part name="SP1" library="adafruit" deviceset="SPEAKER" device="/PS12"/>
