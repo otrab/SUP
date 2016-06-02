@@ -16127,10 +16127,10 @@ or will meet your specific requirements.&lt;p&gt;
 <smd name="P$18" x="-4" y="3.75" dx="0.3" dy="4.1" layer="1" roundness="10"/>
 <smd name="P$19" x="-4.5" y="3.75" dx="0.3" dy="4.1" layer="1" roundness="10"/>
 <pad name="P$20" x="-7.25" y="2.24" drill="0.9" diameter="1.5" shape="long" rot="R90"/>
-<wire x1="-7.7" y1="3.14" x2="-7.7" y2="1.34" width="0.01" layer="46"/>
-<wire x1="-6.8" y1="3.14" x2="-6.8" y2="1.34" width="0.01" layer="46"/>
-<wire x1="-7.7" y1="3.14" x2="-6.8" y2="3.14" width="0.01" layer="46" curve="-180"/>
-<wire x1="-7.7" y1="1.34" x2="-6.8" y2="1.34" width="0.01" layer="46" curve="180"/>
+<wire x1="-7.7" y1="3.14" x2="-7.7" y2="1.34" width="0.01" layer="44"/>
+<wire x1="-6.8" y1="3.14" x2="-6.8" y2="1.34" width="0.01" layer="44"/>
+<wire x1="-7.7" y1="3.14" x2="-6.8" y2="3.14" width="0.01" layer="44" curve="-180"/>
+<wire x1="-7.7" y1="1.34" x2="-6.8" y2="1.34" width="0.01" layer="44" curve="180"/>
 <polygon width="0.01" layer="29">
 <vertex x="-8.1" y="2.69"/>
 <vertex x="-8.1" y="3.14" curve="-180"/>
@@ -16160,10 +16160,10 @@ or will meet your specific requirements.&lt;p&gt;
 <wire x1="-8.1" y1="2.69" x2="-8.1" y2="1.92" width="0.01" layer="30"/>
 <wire x1="-6.4" y1="1.92" x2="-6.4" y2="2.69" width="0.01" layer="30"/>
 <pad name="P$21" x="7.25" y="2.24" drill="0.9" diameter="1.5" shape="long" rot="R90"/>
-<wire x1="6.8" y1="3.14" x2="6.8" y2="1.34" width="0.01" layer="46"/>
-<wire x1="7.7" y1="3.14" x2="7.7" y2="1.34" width="0.01" layer="46"/>
-<wire x1="6.8" y1="3.14" x2="7.7" y2="3.14" width="0.01" layer="46" curve="-180"/>
-<wire x1="6.8" y1="1.34" x2="7.7" y2="1.34" width="0.01" layer="46" curve="180"/>
+<wire x1="6.8" y1="3.14" x2="6.8" y2="1.34" width="0.01" layer="44"/>
+<wire x1="7.7" y1="3.14" x2="7.7" y2="1.34" width="0.01" layer="44"/>
+<wire x1="6.8" y1="3.14" x2="7.7" y2="3.14" width="0.01" layer="44" curve="-180"/>
+<wire x1="6.8" y1="1.34" x2="7.7" y2="1.34" width="0.01" layer="44" curve="180"/>
 <polygon width="0.01" layer="1">
 <vertex x="6.5" y="2.81"/>
 <vertex x="6.5" y="3.14" curve="-180"/>
@@ -16207,15 +16207,15 @@ or will meet your specific requirements.&lt;p&gt;
 <wire x1="6.4" y1="2.69" x2="6.4" y2="1.92" width="0.01" layer="30"/>
 <wire x1="8.1" y1="1.92" x2="8.1" y2="2.69" width="0.01" layer="30"/>
 <pad name="P$23" x="7.25" y="-3.72" drill="0.9" diameter="1.5" shape="long" rot="R90"/>
-<wire x1="6.8" y1="-3.32" x2="6.8" y2="-4.12" width="0.01" layer="46"/>
-<wire x1="7.7" y1="-3.32" x2="7.7" y2="-4.12" width="0.01" layer="46"/>
-<wire x1="6.8" y1="-3.32" x2="7.7" y2="-3.32" width="0.01" layer="46" curve="-180"/>
-<wire x1="6.8" y1="-4.12" x2="7.7" y2="-4.12" width="0.01" layer="46" curve="180"/>
+<wire x1="6.8" y1="-3.32" x2="6.8" y2="-4.12" width="0.01" layer="44"/>
+<wire x1="7.7" y1="-3.32" x2="7.7" y2="-4.12" width="0.01" layer="44"/>
+<wire x1="6.8" y1="-3.32" x2="7.7" y2="-3.32" width="0.01" layer="44" curve="-180"/>
+<wire x1="6.8" y1="-4.12" x2="7.7" y2="-4.12" width="0.01" layer="44" curve="180"/>
 <pad name="P$22" x="-7.25" y="-3.72" drill="0.9" diameter="1.5" shape="long" rot="R90"/>
-<wire x1="-7.7" y1="-3.32" x2="-7.7" y2="-4.12" width="0.01" layer="46"/>
-<wire x1="-6.8" y1="-3.32" x2="-6.8" y2="-4.12" width="0.01" layer="46"/>
-<wire x1="-7.7" y1="-3.32" x2="-6.8" y2="-3.32" width="0.01" layer="46" curve="-180"/>
-<wire x1="-7.7" y1="-4.12" x2="-6.8" y2="-4.12" width="0.01" layer="46" curve="180"/>
+<wire x1="-7.7" y1="-3.32" x2="-7.7" y2="-4.12" width="0.01" layer="44"/>
+<wire x1="-6.8" y1="-3.32" x2="-6.8" y2="-4.12" width="0.01" layer="44"/>
+<wire x1="-7.7" y1="-3.32" x2="-6.8" y2="-3.32" width="0.01" layer="44" curve="-180"/>
+<wire x1="-7.7" y1="-4.12" x2="-6.8" y2="-4.12" width="0.01" layer="44" curve="180"/>
 <wire x1="-7.5" y1="3.84" x2="7.5" y2="3.84" width="0.127" layer="51"/>
 <wire x1="-7.5" y1="3.84" x2="-7.5" y2="-8.31" width="0.127" layer="51"/>
 <wire x1="-7.5" y1="-8.31" x2="7.5" y2="-8.31" width="0.127" layer="51"/>
