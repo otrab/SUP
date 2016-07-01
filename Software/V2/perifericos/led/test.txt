@@ -1,0 +1,50 @@
+/*
+ * light_ws2812 example
+ *
+ * Created: 07.03.2014 12:49:30
+ *  Author: Matthias Riegler
+ */
+
+#include "WS2812.h"
+
+WS2812 LED(7); // 1 LED
+
+cRGB value;
+
+void setup() {
+	LED.setOutput(9);     // Digital Pin 9
+	value.b = 0;
+	value.g = 0;
+	value.r = 0;
+	for(int i = 0; i < 7; i++) {
+		LED.set_crgb_at(i, value);
+	}
+	LED.sync();
+}
+int k = 0;
+bool f = 0;
+void loop() {
+	for(int i = 0; i < 7; i++) {
+		if(i != 0) {
+			value.SetHSV((k + (60 * (i-1))) % 360, 255, 30);
+			LED.set_crgb_at(i, value);
+		} else {
+			value.SetHSV(0, 0, 0);
+			LED.set_crgb_at(i, value);
+		}
+	}
+	LED.sync();     // Sends the value to the LED
+	delay(5);
+	if(!f) {
+		k=360;
+	}
+	if(f) {
+		k--;
+	}
+	if(k == 360) {
+		f = 1;
+	}
+	if(k == 0) {
+		f = 0;
+	}
+}
