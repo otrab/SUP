@@ -15588,8 +15588,8 @@ PNP complement: PMBT3906.&lt;/h&gt;</description>
 <device name="" package="SOT-23-3">
 <connects>
 <connect gate="G$1" pin="B" pad="1"/>
-<connect gate="G$1" pin="C" pad="2"/>
-<connect gate="G$1" pin="E" pad="3"/>
+<connect gate="G$1" pin="C" pad="3"/>
+<connect gate="G$1" pin="E" pad="2"/>
 </connects>
 <technologies>
 <technology name=""/>
