@@ -43,12 +43,7 @@ unsigned long offset = 0;
 int kk=0;
 //Fin de millis -> t = 0 + el resto de la division del maximo millis con dt ¿?¿?¿?¿?¿?¿?¿?¿?
 void loop() {
-	t = offset + (millis()%5500);
-    if(t<pt){
-        Serial.println("roll");
-        offset=5500%dt;
-    }
-    Serial.println(t);
+	t = millis();
 	int tf = t % dt;
 	int nf = ((t / dt) % n);
 	byte pframe = anim[nf == 0 ? n - 1 : nf - 1];
