@@ -1,0 +1,4 @@
+22EE: Logo / Fill & text
+22EF: Logo / Fill & no text
+22F0: Logo / Outline & no text
+22F1: Logo / Outline & text
